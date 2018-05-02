@@ -5,7 +5,7 @@
 // Trending line chart data	 
 	var trendingLineChart;
 	var data = {
-		labels: ["Apple", "Samsung", "SONY", "Motorola", "Nokia", "Microsoft", "Xiaomi"],
+        labels: ["Pediatric", "Degenerative", "Deformity", "Infection", "Tumor", "Trama", "Random"],
 		datasets: [{
 				label: "First dataset",
 				fillColor: "rgba(128, 222, 234, 0.6)",
@@ -46,20 +46,40 @@
 
 	// Polor chart data
 	var doughnutData = [{
-		value: 3000,
-		color: "#F7464A",
-		highlight: "#FF5A5E",
-		label: "Mobile"
+		value: 300,
+        color: "#001433",
+        highlight: "#001433",
+        label: "Pediatric"
 	}, {
+		value: 600,
+		color: "#003380",
+		highlight: "#003380",
+		label: "Degenerative"
+	}, {
+		value: 210,
+		color: "#80b3ff",
+		highlight: "#80b3ff",
+		label: "Deformity"
+	},{
+		value: 330,
+		color: "#163f56",
+		highlight: "#163f56",
+		label: "Infection"
+	},{
 		value: 500,
-		color: "#46BFBD",
-		highlight: "#5AD3D1",
-		label: "Kitchen"
-	}, {
+		color: "#cce0ff",
+		highlight: "#cce0ff",
+		label: "Tumor"
+	},{
+		value: 500,
+		color: "#e6f0ff",
+		highlight: "#e6f0ff",
+		label: "Trauma"
+	},{
 		value: 1000,
-		color: "#FDB45C",
-		highlight: "#FFC870",
-		label: "Home"
+		color: "#000a1a",
+		highlight: "#000a1a",
+		label: "Random"
 	}];
 
 
@@ -99,7 +119,7 @@
 
 	// Trending Bar chart	data
 	var radarChartData = {
-		labels: ["Chrome", "Mozilla", "Safari", "IE10", "iPhone"],
+		labels: ["Pediatric", "Degeneration", "Deformity", "Tumor", "Trauma","Infection","Random"],
 		datasets: [{
 			label: "First dataset",
 			fillColor: "rgba(255,255,255,0.2)",
@@ -108,7 +128,7 @@
 			pointStrokeColor: "#fff",
 			pointHighlightFill: "#fff",
 			pointHighlightStroke: "#fff",
-			data: [5, 6, 7, 8, 6]
+			data: [5, 6, 7, 8, 6,3,8,10]
 		}],
 	};
 

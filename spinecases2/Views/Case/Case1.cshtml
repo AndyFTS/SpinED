@@ -1,0 +1,174 @@
+﻿
+@{
+    ViewBag.Title = "Case1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="section white full-height">
+    <div class="row valign">
+        <div class="col s12 m8 offset-m2 l6 offset-l3 blog-body">
+            <h4>Case 1</h4>
+            <p>
+                This is appropriate for trainees at all levels from medical students to fellows in orthopedic and neurosurgery. Practice managing everything from nonoperative fractures, to fracture dislocations of the spine, adult and pediatric deformity and test your knowledge by managing intraoperative and postoperative complications.
+            </p>
+            <div class="divider"></div>
+            <h4>History</h4>
+            <p>65 year old male involved in high speed MVC. Intubated on scene, left sided chest tube placed in trauma bay, GCS 5. No response to pain in lower limbs. Pan CT is performed.
+            </p>
+            @*<div class="divider"></div>
+            <h4>Intra-Operative Findings</h4>
+            <p>
+                Significant bleeding was identified. 
+            </p>*@
+            <div class="divider"></div>
+            <h4>Pre Operative Imaging</h4>
+            
+            <div id="saggital" class="col s12" style="margin-bottom:0px;">
+                <h4>Sagittal CT</h4>
+                <p>Move the range slider to scroll through the image sets</p>
+                <div class="row" style="margin-bottom:0px;">
+                    <div class="col m12">
+                        @{
+
+                            for (int i = 49; i < 72; i++)
+                            {
+                                string imglink = "/images/Case1/Saggital/ser017img" + i.ToString("00000") + ".jpg";
+                                <img class="responsive-img slider-image" style="display:none;" src="@imglink" />
+                            }
+
+                        }
+                    </div>
+                    <div class="col s12 m12 l12">
+
+                        <div class="row">
+                            <div class="col s12 m12 l12">
+                                <form action="#">
+                                    <p class="range-field">
+                                        <input type="range" id="test1" min="0" max="21" style="margin:0px;"/>
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="axial" class="col s12 m12 l12" style="margin-bottom:0px;">
+                <h4>Transverse CT</h4>
+                <p>Move the range slider to scroll through the image sets</p>
+                <div class="row" style="margin-bottom:0px;">
+                    <div class="col m12">
+                        @{
+
+                            for (int i = 1; i < 107; i++)
+                            {
+                                string imglink = "/images/Case1/Transverse/ser006img" + i.ToString("00000") + ".jpg";
+                                <img class="responsive-img slider-image2" style="display:none;" src="@imglink" />
+                            }
+
+                        }
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="row">
+                            <div class="col s12 m12 l12">
+                                <form action="#">
+                                    <p class="range-field">
+                                        <input type="range" id="test2" min="0" max="105" style="margin:0px;" />
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div id="coronal" class="col s12" style="margin-bottom:0px;">
+                <h4>Coronal CT</h4>
+                <p>Move the range slider to scroll through the image sets</p>
+                <div class="row" style="margin-bottom:0px;">
+                    <div class="col m12">
+                        @{
+
+                            for (int i = 65; i < 90; i++)
+                            {
+                                string imglink = "/images/Case1/Coronal/ser016img" + i.ToString("00000") + ".jpg";
+                                <img class="responsive-img slider-image3" style="display:none;" src="@imglink" />
+                            }
+
+                        }
+                    </div>
+                    <div class="col s12 m12 l12">
+                      
+                        <div class="row">
+                            <div class="col s12 m12 l12">
+                                <form action="#">
+                                    <p class="range-field">
+                                        <input type="range" id="test3" min="0" max="23" style="margin:0px;" />
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            
+            <div class="row">
+                <div class="col s12" style="margin-top:0px;">
+                    <ul class="tabs">
+                        <li class="tab col s4"><a href="#saggital">Sagittal</a></li>
+                        <li class="tab col s4"><a href="#axial">Axial</a></li>
+                        <li class="tab col s4"><a href="#coronal">Coronal</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <a href="@Url.Action("Case1","Case")" class="waves-effect case-flicker-left"><i class="material-icons case-flicker">chevron_left</i></a>
+    <a href="@Url.Action("Case1","Case")" class="waves-effect case-flicker-right"><i class="material-icons case-flicker">chevron_right</i></a>
+
+    
+</div>
+
+
+@section scripts{
+
+    <script type="text/javascript">
+        $(function () {
+            $('.carousel').carousel();
+            $('.tabs').tabs();
+            var slider = document.getElementById("test1");
+            var slider2 = document.getElementById("test2");
+            var slider3 = document.getElementById("test3");
+            var init_slider_val = slider.value;
+            var init_slider_val2 = slider2.value;
+            var init_slider_val3 = slider3.value;
+            
+            $('.slider-image').eq(init_slider_val).show();
+            $('.slider-image2').eq(init_slider_val2).show();
+            $('.slider-image3').eq(init_slider_val3).show();
+            // Update the current slider value (each time you drag the slider handle)
+            slider.oninput = function () {
+                $('.slider-image').hide();
+                $('.slider-image').eq(this.value).show();
+             
+            }
+            slider2.oninput = function () {
+                $('.slider-image2').hide();
+                $('.slider-image2').eq(this.value).show();
+
+            }
+            slider3.oninput = function () {
+                $('.slider-image3').hide();
+                $('.slider-image3').eq(this.value).show();
+
+            }
+            $('.toggleGifs').click(function () { //Default mouse Position 
+                $('.toggleGifs').toggle();
+            });
+        });
+        
+
+    </script>
+
+}

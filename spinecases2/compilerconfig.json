@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "sass/startup.css",
+    "inputFile": "sass/startup.scss"
+  },
+  {
+    "outputFile": "sass/startup-standalone.css",
+    "inputFile": "sass/startup-standalone.scss"
+  }
+]

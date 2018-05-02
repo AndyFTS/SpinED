@@ -1,0 +1,81 @@
+﻿@using spinecases2.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+<div class="section header">
+    <img class="background" src="~/images/ken-treloar-385255-unsplash.jpg" alt="">
+    <div class="header-wrapper row valign-wrapper">
+        <div class="col s12">
+            <h1>Login / Register</h1>
+            <span class="tagline">Login with existing account, or Register. </span>
+            <button class="read-more"><i class="icon-caret-down"></i></button>
+        </div>
+    </div>
+</div>
+<div class="section light valign-wrapper">
+    <div class="container">
+        
+            <div class="row">
+                <div class="col s12 m6">
+                 @using (Html.BeginForm("Login", "Account",null, FormMethod.Post, new { role = "form" }))
+                    {
+                    <div class="col s12"><h2 class="section-title">Login</h2></div>
+                    <p class="red-text"> @ViewBag.Message</p>
+                    @Html.AntiForgeryToken()
+                     @Html.ValidationSummary(true, "", new { @class = "red-text" })
+                    <div class="input-field col s12">
+                         @Html.TextBoxFor(m => m.username, new { @class = "validate", type="email", required="required" })
+                            @Html.LabelFor(m => m.username, new { @class = "validate" })
+                            @Html.ValidationMessageFor(m => m.username, "", new { @class = "red-text" })
+                        @*<input id="email" type="email">
+                        <label for="email">Email</label>*@
+                    </div>
+                    <div class="input-field col s12">
+
+                         @Html.TextBoxFor(m => m.password, new { @class = "validate", type = "password", required="required" })
+                            @Html.LabelFor(m => m.password, new { @class = "validate" })
+                            @Html.ValidationMessageFor(m => m.password, "", new { @class = "red-text" })
+                        @*<input id="password" type="password">
+                        <label for="password">Password</label>*@
+                    </div>
+                    <div class="col s12">
+                        <input type="checkbox" id="rememberme" />
+                        <label for="rememberme">Remember Me</label>
+                    </div>
+                    <div class="col s12" style="margin-top: 20px;">
+                        <button class="waves-effect waves-light btn-large" type="submit">Login</button>
+                    </div>
+                    }
+
+                </div>
+                <div class="col s12 m6">
+                    <div class="col s12"><h2 class="section-title">Register</h2></div>
+                    <div class="input-field col s6">
+                        <input id="first_name" type="text">
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="email" type="email">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="password1" type="password">
+                        <label for="password1">Password</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="password" type="password">
+                        <label for="password">Confirm Password</label>
+                        <a class="waves-effect waves-light btn-large">Register</a>
+                    </div>
+                </div>
+            </div>
+      
+    </div>
+</div>
+
+

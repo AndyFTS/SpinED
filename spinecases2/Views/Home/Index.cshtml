@@ -1,0 +1,427 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="header full-height horizontal-half-transition">
+    <div class="background">
+        <img src="~/images/rawpixel-com-472352-unsplash.jpg" alt="">
+    </div>
+    <div class="phone-preview-sizer">
+        <div class="phone-preview"></div>
+        <div class="image-container active" style="background-image:url(../../images/AppDemo530x990.png)"></div>
+        <div class="image-container" style="background-image:url(../../images/AppDemo2530x990.png)"></div>
+        <div class="image-container" style="background-image:url(../../images/AppDemo4530x990.png)"></div>
+    </div>
+    <div class="horizontal-half-wrapper right-side active">
+        <div class="header-background white"></div>
+        <div class="header-wrapper row valign-wrapper">
+            <div class="col s12 m8 offset-m2 valign">
+                <h1>S<span style="text-transform:lowercase;">pin</span>ED</h1>
+                <span class="tagline">An education tool that allows users to be exposed to hundreds of cases in preparation for royal college examinations and general learning purposes</span>
+                <a class="waves-effect waves-light col s6 m6 l6 " style="padding-right: 5px;">
+                   <img class="responsive-img" src="~/images/AppStoreButton280x95.png" />
+                </a>
+                <a class="waves-effect waves-light col s6 m6 l6" style="padding-left: 5px;" >
+                    <img class="responsive-img" src="~/images/GooglePlay280x95.png" />
+                </a>
+                <button class="read-more col s12 m12 l12"><i class="icon-caret-down"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="horizontal-half-wrapper hide-on-small-and-down">
+        <div class="header-background white"></div>
+        <div class="header-wrapper row valign-wrapper">
+            <div class="col s12 m8 offset-m2 valign">
+                <h1>TEST YOUR KNOWLEDGE</h1>
+                <span class="tagline">With the largest question bank of spine questions in the world with more than 2000 MCQs!</span>
+                <a class="waves-effect waves-light col s6 m6 l6 " style="padding-right: 5px;">
+                    <img class="responsive-img" src="~/images/AppStoreButton280x95.png" />
+                </a>
+                <a class="waves-effect waves-light col s6 m6 l6" style="padding-left: 5px;">
+                    <img class="responsive-img" src="~/images/GooglePlay280x95.png" />
+                </a>
+                <button class="read-more"><i class="icon-caret-down"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="horizontal-half-wrapper right-side hide-on-small-and-down">
+        <div class="header-background white"></div>
+        <div class="header-wrapper row valign-wrapper">
+            <div class="col s12 m8 offset-m2 valign">
+                <h1>COMPARE YOURSELF TO OTHERS</h1>
+                <span class="tagline">Every multiple choice question or spine case you answer allows for the real-time development of educational profiles</span>
+                <a class="waves-effect waves-light col s6 m6 l6 " style="padding-right: 5px;">
+                    <img class="responsive-img" src="~/images/AppStoreButton280x95.png" />
+                </a>
+                <a class="waves-effect waves-light col s6 m6 l6" style="padding-left: 5px;">
+                    <img class="responsive-img" src="~/images/GooglePlay280x95.png" />
+                </a>
+                <button class="read-more"><i class="icon-caret-down"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section valign-wrapper">
+    <div class="row valign">
+        <div class="col s12 m10 offset-m1">
+            <div class="row">
+                @*<div class="col s12"><h2 class="section-title">Features</h2></div>*@
+                <div class="col s12 m6 l4">
+                    <h4><i class="icon-light-bulb"></i>Test Yourself</h4>
+                    <p class="caption">We have the largest question bank of spine questions in the world with more than 2000 MCQs.  Developed from popular textbooks and articles from the last 20 years of the Journal of American Academy of Orthopedic Surgeons (JAAOS)</p>
+                </div>
+                <div class="col s12 m6 l4">
+                    <h4><i class="icon-bolt"></i>Compare Results</h4>
+                    <p class="caption">Every multiple choice question or spine case you answer allows for the real-time development of educational profiles.  This unique education tool allows you to understand your specific areas of weakness by subspecialty within spine surgery and region of the spine.</p>
+                </div>
+                <div class="col s12 m6 l4">
+                    <h4><i class="icon-rocket"></i> AR Spine <b style="font-size:medium; color:red; font-weight:500;">Coming Soon</b></h4>
+                    <p class="caption">While in lecture or on the bus, you can have a spine on a surgical table in front of you, exposed and ready for pedicle screws.  Anatomically correct spines have been programmed for you to choose the appropriate start point, and trajectory </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Reviews-->
+<div class="section light full-height">
+    <div class="row">
+        
+        <div class="col s12 m10 offset-m1 center">
+            <div class="row">
+                <div id="trauma_module" class="col s12 m12 l12 waves-effect" style="background-color:black; margin:10px;">
+                    <h3>Trauma</h3>
+                </div>
+                <div id ='trauma_module_elements' class="col s12 m12 l12" >
+                    <div class="row masonry-grid">
+                        <div class="col s12 m6 l4">
+                            <div class="card">
+                                <div class="card-image" id="thoracolumbar_card">
+                                    <a href="@Url.Action("Case1","Case")">
+                                        <img id="thoracolumbar_img_static" src="~/images/NeuroFracture.png">
+                                        <img id="thoracolumbar_img_vivid" style="display:none;" src="~/images/thoracolumbar600x400.gif" />
+                                    </a>
+                                    <span class="card-title">Case 1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <div class="card">
+                                <div class="card-image" id="cervical_card">
+                                    <a href="@Url.Action("Case1","Case")">
+                                        <img id="cervical_img_static" src="~/images/cervical600x400.jpg">
+                                        <img id="cervical_img_vivid" style="display:none;" src="~/images/cervical600x400.gif" />
+                                    </a>
+                                    <span class="card-title">Case 2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <div class="card">
+                                <div class="card-image" id="cervicaldislocation_card">
+                                    <a href="@Url.Action("Case1","Case")">
+                                        <img id="cervicaldislocation_img_static" src="~/images/cervicaldislocation600x400.png">
+                                        <img id="cervicaldislocation_img_vivid" style="display:none;" src="~/images/cervicaldislocation600x400.gif" />
+                                    </a>
+                                    <span class="card-title">Case 3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <div class="card">
+                                <div class="card-image" id="lumbar_card">
+                                    <a href="@Url.Action("Case1","Case")">
+                                        <img id="lumbar_img_static" src="~/images/lumbar600x400.png">
+                                        <img id="lumbar_img_vivid" style="display:none;" src="~/images/lumbar600x400.gif" />
+                                    </a>
+                                    <span class="card-title">Case 4</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <div class="card">
+                                <div class="card-image" id="cervicalsubluxation_card">
+                                    <a href="@Url.Action("Case1","Case")">
+                                        <img id="cervicalsubluxation_img_static" src="~/images/cervicalsubluxation600x400.png">
+                                        <img id="cervicalsubluxation_img_vivid" style="display:none;" src="~/images/cervicalsubluxation600x400.gif" />
+                                    </a>
+                                    <span class="card-title">Case 5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <div class="card">
+                                <div class="card-image" id="cervicalundisplaced_card">
+                                    <a href="@Url.Action("Case1","Case")">
+                                        <img id="cervicalundisplaced_img_static" src="~/images/cervicalundisplaced600x400.png">
+                                        <img id="cervicalundisplaced_img_vivid" style="display:none;" src="~/images/cervicaundisplacedl600x400.gif" />
+                                    </a>
+                                    <span class="card-title">Case 6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
+                    <h3>Pediatric</h3>
+                </div>
+                <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
+                    <h3>Degenerative</h3>
+                </div>
+                <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
+                    <h3>Deformity</h3>
+                </div>
+                <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
+                    <h3>Infection</h3>
+                </div>
+                <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
+                    <h3>Tumor</h3>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+<!--Performance Metrics-->
+<div class="section white full-height">
+        <div class="row valign">
+            
+            <div class="col s12 m10 offset-m1 staggered-transition-wrapper">
+                
+                
+                <div class="row">
+                    <div class="col s12 m12 l12 feature left-in-out"><h1 style="margin-bottom: 0px;">Dynamic Data Analytics</h1></div>
+                    
+                        <div class="chart-container col s12 m12 l6 feature left-in-out fade-in-out " style="padding: 0px;margin: 0px;">
+                            <canvas id="chart"></canvas>
+                        </div>
+                 
+                        <div class="chart-container col s12 m12 l6 feature left-in-out fade-in-out"style="padding: 0px;margin: 0px;">
+                            <canvas id="chart2"></canvas>
+                        </div>
+
+                    
+                </div>
+                <div class="row">
+
+                    <div class="chart-container col s12 m12 l6 feature left-in-out fade-in-out" style="position: relative; padding: 0px;margin: 0px;">
+                        <canvas id="chart3"></canvas>
+                    </div>
+
+                    <div class="chart-container col s12 m12 l6 feature left-in-out fade-in-out" style="padding: 0px;margin: 0px;">
+                        <canvas id="chart4"></canvas>
+                    </div>
+
+
+                </div>
+              
+              
+            </div>
+        </div>
+    </div>
+<div class="section full-height">
+    <div class="container">
+        <div class="row valign-wrapper">
+            <div class="col m3">
+                <div class="phone-preview-sizer right-in-out fade-in-out">
+                    <div class="phone-preview"></div>
+                    <div class="image-container default" style="background-image:url(../../images/AppDemo2530x990.png)"></div>
+                </div>
+            </div>
+            <div class="col m8 offset-m1">
+                <div class="staggered-transition-wrapper">
+                    <div class="feature left-in-out fade-in-out">
+                        <h3>Understand Your Weaknesses</h3>
+                        <p>Overcoming weaknesses is a door to success, as it not only allows one to make the areas of strengths stronger but also aids in changing the weaknesses into strengths, while it helps to unlock one's potential, so that it may be used to its fullest making one a successful person in every aspect of life. </p>
+                    </div>
+                    <div class="feature left-in-out fade-in-out">
+                        <h3>Compare Yourself To Others</h3>
+                        <p>Focusing on others and getting diverted by comparison would’ve been one of those perilous mistakes. Your race isn’t about other people and where they are. It’s about your training, your focus, your pacing, your state of mind. </p>
+                    </div>
+                    <div class="feature left-in-out fade-in-out">
+                        <h3>Pass The Royal College</h3>
+                        <p>Once a year, the Royal College examines candidates who have completed their postgraduate training and wish to be certified in their area of specialty. Most candidates take their Royal College certification examination in the final year of their postgraduate training program.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Contact Us -->
+        <div class="section light valign-wrapper">
+            <div class="container">
+                <form>
+                    <div class="row">
+                        <div class="col s12"><h2 class="section-title">Contact Us</h2></div>
+                        <div class="input-field col s6">
+                            <input id="first_name" type="text">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="last_name" type="text">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="email" type="email">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="phone" type="text">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea id="message" class="materialize-textarea"></textarea>
+                            <label for="message">Message</label>
+                            <a class="waves-effect waves-light btn-large">Send</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        @section scripts{
+
+            <script type="text/javascript">
+                $(function () {
+                    $('#trauma_module').click(function () {
+                        $('#trauma_module_elements').slideToggle();
+                        
+                    });
+                   
+                    $('#thoracolumbar_card').mouseover(function () {
+                        $('#thoracolumbar_img_static').hide();
+                        $('#thoracolumbar_img_vivid').show();
+                    });
+                    $('#thoracolumbar_card').mouseout(function () {
+                        $('#thoracolumbar_img_vivid').hide();
+                        $('#thoracolumbar_img_static').show();
+                    });
+                    $('#cervical_card').mouseover(function () {
+                        $('#cervical_img_static').hide();
+                        $('#cervical_img_vivid').show();
+                    });
+                    $('#cervical_card').mouseout(function () {
+                        $('#cervical_img_vivid').hide();
+                        $('#cervical_img_static').show();
+                    });
+                    $('#lumbar_card').mouseover(function () {
+                        $('#lumbar_img_static').hide();
+                        $('#lumbar_img_vivid').show();
+                    });
+                    $('#lumbar_card').mouseout(function () {
+                        $('#lumbar_img_vivid').hide();
+                        $('#lumbar_img_static').show();
+                    });
+                    $('#cervicaldislocation_card').mouseover(function () {
+                        $('#cervicaldislocation_img_static').hide();
+                        $('#cervicaldislocation_img_vivid').show();
+                    });
+                    $('#cervicaldislocation_card').mouseout(function () {
+                        $('#cervicaldislocation_img_vivid').hide();
+                        $('#cervicaldislocation_img_static').show();
+                    });
+                    $('#cervicalsubluxation_card').mouseover(function () {
+                        $('#cervicalsubluxation_img_static').hide();
+                        $('#cervicalsubluxation_img_vivid').show();
+                    });
+                    $('#cervicalsubluxation_card').mouseout(function () {
+                        $('#cervicalsubluxation_img_vivid').hide();
+                        $('#cervicalsubluxation_img_static').show();
+                    });
+                    $('#cervicalundisplaced_card').mouseover(function () {
+                        $('#cervicalundisplaced_img_static').hide();
+                        $('#cervicalundisplaced_img_vivid').show();
+                    });
+                    $('#cervicalundisplaced_card').mouseout(function () {
+                        $('#cervicalundisplaced_img_vivid').hide();
+                        $('#cervicalundisplaced_img_static').show();
+                    });
+
+                    var ctx = document.getElementById("chart");
+                    var ctx2 = document.getElementById("chart2");
+                    var ctx3 = document.getElementById("chart3");
+                    var ctx4 = document.getElementById("chart4");
+                    var myLineChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ["January", "February", "March", "April", "May", "June", "July"],
+                            datasets: [{
+                                label: "Your Monthly Scores",
+                                backgroundColor: 'rgba(83, 127, 152,0.38)',
+                                borderColor: 'rgb(22, 63, 86)',
+                                data: [0, 10, 5, 2, 20, 30, 45],
+                            },
+                                {
+                                    label: "Average User Scores",
+                                    backgroundColor: 'rgba(204, 204, 204,0.38)',
+                                    borderColor: 'rgb(0, 0, 0)',
+                                    data: [7, 13, 2, 8, 36, 2, 50],
+                                }
+                            ]
+                        }
+
+                       
+                    });
+                    var radarchart = new Chart(ctx2, {
+                        type: 'radar',
+                        data: {
+                            labels: ['Pediatric', 'Degenerative', 'Deformity', 'Infection','Tumor','Trauma'],
+                            datasets: [{
+                                label: "Your Scores",
+                                backgroundColor: 'rgba(83, 127, 152,0.38)',
+                                borderColor: 'rgb(22, 63, 86)',
+                                data: [20, 10, 34, 50, 40, 17],
+                            }, {
+                                    label: "Avg User",
+                                    backgroundColor: 'rgba(204, 204, 204,0.38)',
+                                    borderColor: 'rgb(0, 0, 0)',
+                                    data: [6, 32, 12, 75, 22, 67]
+                            }
+                                
+                            ]
+                        }
+
+                    });
+                    var piechart = new Chart(ctx3, {
+                        type: 'doughnut',
+                        data:{
+                            labels: ['Pediatric', 'Degenerative', 'Deformity', 'Infection', 'Tumor', 'Trauma'],
+                            datasets: [{
+                                label: "Your Scores",
+                                backgroundColor: 'rgba(83, 127, 152,0.38)',
+                                borderColor: 'rgb(22, 63, 86)',
+                                data: [20, 10, 34, 50, 40, 17],
+                            }
+                            , {
+                                label: "Avg User",
+                                backgroundColor: 'rgba(204, 204, 204,0.38)',
+                                borderColor: 'rgb(0, 0, 0)',
+                                data: [6, 32, 12, 75, 22, 67]
+                            }
+
+                            ]
+                        }
+                    });
+                    var barchart = new Chart(ctx4, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Pediatric', 'Degenerative', 'Deformity', 'Infection', 'Tumor', 'Trauma'],
+                            datasets: [{
+                                label: "Your Scores",
+                                backgroundColor: 'rgba(83, 127, 152,0.38)',
+                                borderColor: 'rgb(22, 63, 86)',
+                                data: [20, 10, 34, 50, 40, 17],
+                            }, {
+                                label: "Avg User",
+                                backgroundColor: 'rgba(204, 204, 204,0.38)',
+                                borderColor: 'rgb(0, 0, 0)',
+                                data: [6, 32, 12, 75, 22, 67]
+                            }
+
+                            ]
+                        }
+                    });
+                    $('#u_y_w')
+                });
+            </script>
+        }

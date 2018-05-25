@@ -61,6 +61,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -150,6 +151,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connected Services\FTSEmailService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -160,6 +166,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Connected Services\FTSEmailService\spinecases2.FTSEmailService.SendEmailMsgReplyDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\FTSEmailService\TbEmailService.disco" />
+    <None Include="Connected Services\FTSEmailService\configuration91.svcinfo" />
+    <None Include="Connected Services\FTSEmailService\configuration.svcinfo" />
+    <None Include="Connected Services\FTSEmailService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="css\docs.css" />
     <Content Include="css\materialize.min.css" />
     <Content Include="css\startup-materialize.css" />
@@ -603,6 +619,19 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <None Include="Connected Services\FTSEmailService\TbEmailService.wsdl" />
+    <None Include="Connected Services\FTSEmailService\TbEmailService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FTSEmailService\TbEmailService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FTSEmailService\TbEmailService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FTSEmailService\TbEmailService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Case\Case1.cshtml" />
@@ -611,6 +640,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\FTSEmailService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

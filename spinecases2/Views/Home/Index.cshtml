@@ -319,29 +319,30 @@
 <!-- Contact Us -->
 <div class="section light valign-wrapper">
     <div class="container">
-        <form>
+        <form class="js-validate" id="ContactUsForm" method="get" action="@Url.Action("ContactUs","Home")">
             <div class="row">
                 <div class="col s12"><h2 class="section-title">Contact Us</h2></div>
+
                 <div class="input-field col s6">
-                    <input id="first_name" type="text">
-                    <label for="first_name">First Name</label>
+                    <input id="firstname" name="firstname" type="text">
+                    <label for="firstname">First Name</label>
                 </div>
                 <div class="input-field col s6">
-                    <input id="last_name" type="text">
-                    <label for="last_name">Last Name</label>
+                    <input id="lastname" name="lastname" type="text">
+                    <label for="lastname">Last Name</label>
                 </div>
                 <div class="input-field col s6">
-                    <input id="email" type="email">
+                    <input id="email" name="email" type="email">
                     <label for="email">Email</label>
                 </div>
                 <div class="input-field col s6">
-                    <input id="phone" type="text">
+                    <input id="phone" name="phone" type="text">
                     <label for="phone">Phone Number</label>
                 </div>
                 <div class="input-field col s12">
-                    <textarea id="message" class="materialize-textarea"></textarea>
-                    <label for="message">Message</label>
-                    <a class="waves-effect waves-light btn-large">Send</a>
+                    <textarea id="msg" name="msg" class="materialize-textarea"></textarea>
+                    <label for="msg">Message</label>
+                    <button type="submit" class="waves-effect waves-light btn-large">Send</button>
                 </div>
             </div>
         </form>
@@ -405,91 +406,120 @@
                 $('#cervicalundisplaced_img_static').show();
             });
 
-            var ctx = document.getElementById("chart");
-            var ctx2 = document.getElementById("chart2");
-            var ctx3 = document.getElementById("chart3");
-            var ctx4 = document.getElementById("chart4");
-            var myLineChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ["January", "February", "March", "April", "May", "June", "July"],
-                    datasets: [{
-                        label: "Your Monthly Scores",
-                        backgroundColor: 'rgba(83, 127, 152,0.38)',
-                        borderColor: 'rgb(22, 63, 86)',
-                        data: [0, 10, 5, 2, 20, 30, 45],
-                    },
-                    {
-                        label: "Average User Scores",
-                        backgroundColor: 'rgba(204, 204, 204,0.38)',
-                        borderColor: 'rgb(0, 0, 0)',
-                        data: [7, 13, 2, 8, 36, 2, 50],
-                    }
-                    ]
+            $('#ContactUsForm').submit(function(e) {
+                e.preventDefault();
+                var emptyFName = $("#firstname").filter(function () { return !$.trim(this.value); }).length > 0
+                var emptyEmail = $("#email").filter(function () { return !$.trim(this.value); }).length > 0
+                var emptyLName = $("#lastname").filter(function () { return !$.trim(this.value); }).length > 0
+                var emptyPhone = $("#phone").filter(function () { return !$.trim(this.value); }).length > 0
+                var emptyMsg = $("#msg").filter(function () { return !$.trim(this.value); }).length > 0
+                if (emptyFName | emptyEmail | emptyLName | emptyPhone | emptyMsg) {
+                    Materialize.toast("sorry, we cant properly review your message unless you fill out all the sections.", 5000);                   
                 }
+                else
+                {
+                    var formData = $(this).serialize();
+               
+                $.ajax({
+                    dataType: "json",
+                    url: "@Url.Action("ContactUs","Home")",
+                    data: formData,
+                    success: function (data) {
+                        $('#ContactUsForm')[0].reset();
+                        Materialize.toast(data.msg, 5000 );
 
-
+                      },
+                    error: function () {
+                        Materialize.toast('Sorry, We couldnt send your message at this time. Please try again later ',  5000 );
+                      }
+                });
+                }  
             });
-            var radarchart = new Chart(ctx2, {
-                type: 'radar',
-                data: {
-                    labels: ['Pediatric', 'Degenerative', 'Deformity', 'Infection', 'Tumor', 'Trauma'],
-                    datasets: [{
-                        label: "Your Scores",
-                        backgroundColor: 'rgba(83, 127, 152,0.38)',
-                        borderColor: 'rgb(22, 63, 86)',
-                        data: [20, 10, 34, 50, 40, 17],
-                    }, {
-                        label: "Avg User",
-                        backgroundColor: 'rgba(204, 204, 204,0.38)',
-                        borderColor: 'rgb(0, 0, 0)',
-                        data: [6, 32, 12, 75, 22, 67]
-                    }
+            //var ctx = document.getElementById("chart");
+            //var ctx2 = document.getElementById("chart2");
+            //var ctx3 = document.getElementById("chart3");
+            //var ctx4 = document.getElementById("chart4");
+            //var myLineChart = new Chart(ctx, {
+            //    type: 'line',
+            //    data: {
+            //        labels: ["January", "February", "March", "April", "May", "June", "July"],
+            //        datasets: [{
+            //            label: "Your Monthly Scores",
+            //            backgroundColor: 'rgba(83, 127, 152,0.38)',
+            //            borderColor: 'rgb(22, 63, 86)',
+            //            data: [0, 10, 5, 2, 20, 30, 45],
+            //        },
+            //        {
+            //            label: "Average User Scores",
+            //            backgroundColor: 'rgba(204, 204, 204,0.38)',
+            //            borderColor: 'rgb(0, 0, 0)',
+            //            data: [7, 13, 2, 8, 36, 2, 50],
+            //        }
+            //        ]
+            //    }
 
-                    ]
-                }
 
-            });
-            var piechart = new Chart(ctx3, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Pediatric', 'Degenerative', 'Deformity', 'Infection', 'Tumor', 'Trauma'],
-                    datasets: [{
-                        label: "Your Scores",
-                        backgroundColor: 'rgba(83, 127, 152,0.38)',
-                        borderColor: 'rgb(22, 63, 86)',
-                        data: [20, 10, 34, 50, 40, 17],
-                    }
-                        , {
-                        label: "Avg User",
-                        backgroundColor: 'rgba(204, 204, 204,0.38)',
-                        borderColor: 'rgb(0, 0, 0)',
-                        data: [6, 32, 12, 75, 22, 67]
-                    }
+            //});
+            //var radarchart = new Chart(ctx2, {
+            //    type: 'radar',
+            //    data: {
+            //        labels: ['Pediatric', 'Degenerative', 'Deformity', 'Infection', 'Tumor', 'Trauma'],
+            //        datasets: [{
+            //            label: "Your Scores",
+            //            backgroundColor: 'rgba(83, 127, 152,0.38)',
+            //            borderColor: 'rgb(22, 63, 86)',
+            //            data: [20, 10, 34, 50, 40, 17],
+            //        }, {
+            //            label: "Avg User",
+            //            backgroundColor: 'rgba(204, 204, 204,0.38)',
+            //            borderColor: 'rgb(0, 0, 0)',
+            //            data: [6, 32, 12, 75, 22, 67]
+            //        }
 
-                    ]
-                }
-            });
-            var barchart = new Chart(ctx4, {
-                type: 'bar',
-                data: {
-                    labels: ['Pediatric', 'Degenerative', 'Deformity', 'Infection', 'Tumor', 'Trauma'],
-                    datasets: [{
-                        label: "Your Scores",
-                        backgroundColor: 'rgba(83, 127, 152,0.38)',
-                        borderColor: 'rgb(22, 63, 86)',
-                        data: [20, 10, 34, 50, 40, 17],
-                    }, {
-                        label: "Avg User",
-                        backgroundColor: 'rgba(204, 204, 204,0.38)',
-                        borderColor: 'rgb(0, 0, 0)',
-                        data: [6, 32, 12, 75, 22, 67]
-                    }
+            //        ]
+            //    }
 
-                    ]
-                }
-            });
-            $('#u_y_w')
+            //});
+            //var piechart = new Chart(ctx3, {
+            //    type: 'doughnut',
+            //    data: {
+            //        labels: ['Pediatric', 'Degenerative', 'Deformity', 'Infection', 'Tumor', 'Trauma'],
+            //        datasets: [{
+            //            label: "Your Scores",
+            //            backgroundColor: 'rgba(83, 127, 152,0.38)',
+            //            borderColor: 'rgb(22, 63, 86)',
+            //            data: [20, 10, 34, 50, 40, 17],
+            //        }
+            //            , {
+            //            label: "Avg User",
+            //            backgroundColor: 'rgba(204, 204, 204,0.38)',
+            //            borderColor: 'rgb(0, 0, 0)',
+            //            data: [6, 32, 12, 75, 22, 67]
+            //        }
+
+            //        ]
+            //    }
+            //});
+            //var barchart = new Chart(ctx4, {
+            //    type: 'bar',
+            //    data: {
+            //        labels: ['Pediatric', 'Degenerative', 'Deformity', 'Infection', 'Tumor', 'Trauma'],
+            //        datasets: [{
+            //            label: "Your Scores",
+            //            backgroundColor: 'rgba(83, 127, 152,0.38)',
+            //            borderColor: 'rgb(22, 63, 86)',
+            //            data: [20, 10, 34, 50, 40, 17],
+            //        }, {
+            //            label: "Avg User",
+            //            backgroundColor: 'rgba(204, 204, 204,0.38)',
+            //            borderColor: 'rgb(0, 0, 0)',
+            //            data: [6, 32, 12, 75, 22, 67]
+            //        }
+
+            //        ]
+            //    }
+            //});
+            //$('#u_y_w')
         });
     </script>
 }

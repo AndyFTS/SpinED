@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0a6770ce-7069-428a-a8d6-d1bbbdac72c8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://www.majesticsports.ca/TravelbestEmailService/TbEmailService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TbEmailService.xsd" MetadataType="Schema" ID="92956d94-fe34-4af2-ba7e-c8ff23d79c6d" SourceId="1" SourceUrl="https://www.majesticsports.ca/TravelbestEmailService/TbEmailService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TbEmailService1.xsd" MetadataType="Schema" ID="35bf4c9e-a099-460d-9d01-b59928789695" SourceId="1" SourceUrl="https://www.majesticsports.ca/TravelbestEmailService/TbEmailService.svc?xsd=xsd3" />
+    <MetadataFile FileName="TbEmailService2.xsd" MetadataType="Schema" ID="be4f4ff5-e41d-4bd4-8a2c-a2f4738fa355" SourceId="1" SourceUrl="https://www.majesticsports.ca/TravelbestEmailService/TbEmailService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TbEmailService.disco" MetadataType="Disco" ID="161dcc1c-e709-44db-8279-12475356bba6" SourceId="1" SourceUrl="https://www.majesticsports.ca/TravelbestEmailService/TbEmailService.svc?disco" />
+    <MetadataFile FileName="TbEmailService.wsdl" MetadataType="Wsdl" ID="0ea8e4e9-8ec6-4820-a419-5579adcdf473" SourceId="1" SourceUrl="https://www.majesticsports.ca/TravelbestEmailService/TbEmailService.svc?wsdl" />
+    <MetadataFile FileName="TbEmailService3.xsd" MetadataType="Schema" ID="02a8eeda-8ab1-4412-952a-172f2c76ee45" SourceId="1" SourceUrl="https://www.majesticsports.ca/TravelbestEmailService/TbEmailService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

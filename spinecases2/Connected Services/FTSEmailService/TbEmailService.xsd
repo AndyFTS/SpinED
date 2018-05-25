@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TbEmailService.Dtos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TbEmailService.Dtos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://www.majesticsports.ca/TravelbestEmailService/TbEmailService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:simpleType name="SendEmailMsgRequestDto.EmailType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Promo" />
+      <xs:enumeration value="CustomerAppreciation" />
+      <xs:enumeration value="None" />
+      <xs:enumeration value="ClientBirthday" />
+      <xs:enumeration value="PassengerBirthday" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SendEmailMsgRequestDto.EmailType" nillable="true" type="tns:SendEmailMsgRequestDto.EmailType" />
+  <xs:complexType name="SendEmailMsgRequestDto">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Bcc" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Cc" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="FromAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromDisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsBodyHtml" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MainHeader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubHeader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="To" nillable="true" type="q3:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendEmailMsgRequestDto" nillable="true" type="tns:SendEmailMsgRequestDto" />
+  <xs:complexType name="SendEmailMsgReplyDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessageDto" nillable="true" type="tns:ErrorMessageDto" />
+      <xs:element minOccurs="0" name="SendEmailMsgRequest" nillable="true" type="tns:SendEmailMsgRequestDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendEmailMsgReplyDto" nillable="true" type="tns:SendEmailMsgReplyDto" />
+  <xs:complexType name="ErrorMessageDto">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ErrorMessageText" nillable="true" type="q4:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorMessageDto" nillable="true" type="tns:ErrorMessageDto" />
+</xs:schema>

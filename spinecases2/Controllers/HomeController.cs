@@ -54,7 +54,7 @@ namespace spinecases2.Controllers
                     FromDisplayName = "SpinED",
                     IsBodyHtml = true,
                     MainHeader = $"This message was sent using the Contact Us form on spined.com by {email}",
-                    Subject = $"Message recieved from FTS.com",
+                    Subject = $"Message recieved from SpinED.com",
                     To = new[] { "andyf280@gmail.com"/*System.Configuration.ConfigurationManager.AppSettings["ContactUsEmail"]*/ },
                 });
                 return result.ErrorMessageDto == null ?

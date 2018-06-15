@@ -463,6 +463,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Team.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\spinecasesdemo.falcontechnologysolutions.com.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -632,7 +633,6 @@
     <None Include="Connected Services\FTSEmailService\TbEmailService3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Case\Case1.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />

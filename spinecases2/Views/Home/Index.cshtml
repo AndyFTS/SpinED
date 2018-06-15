@@ -85,7 +85,7 @@
 </div>
 
 <!--Reviews-->
-<div class="section light full-height">
+<div class="section light full-height" id="module-section">
     <div class="row">
 
         <div class="col s12 m10 offset-m1 center">
@@ -220,7 +220,7 @@
         </div>
     </div>
 </div>*@
-<div class="section full-height">
+<div class="section full-height" id="overview-section">
     <div class="container">
         <div class="row valign-wrapper">
             <div class="col m3">
@@ -405,6 +405,20 @@
                 $('#cervicalundisplaced_img_vivid').hide();
                 $('#cervicalundisplaced_img_static').show();
             });
+
+            var options = [
+                {
+                    selector: '#module-section', offset: 50, callback: function (el) {
+                        Materialize.toast("New cases uploaded daily!", 1500);
+                    }
+                },
+                {
+                    selector: '#overview-section', offset: 205, callback: function (el) {
+                        Materialize.toast("Over 3000 MCQ's from The Journal of American Academy of Orthopedic Surgeons", 1500);
+                    }
+                },
+            ];
+            Materialize.scrollFire(options);
 
             $('#ContactUsForm').submit(function(e) {
                 e.preventDefault();

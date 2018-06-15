@@ -55,7 +55,7 @@ namespace spinecases2.Controllers
                     IsBodyHtml = true,
                     MainHeader = $"This message was sent using the Contact Us form on spined.com by {email}",
                     Subject = $"Message recieved from SpinED.com",
-                    To = new[] { "andyf280@gmail.com"/*System.Configuration.ConfigurationManager.AppSettings["ContactUsEmail"]*/ },
+                    To = new[] { "colby.oitment@medportal.ca"/*System.Configuration.ConfigurationManager.AppSettings["ContactUsEmail"]*/ },
                 });
                 return result.ErrorMessageDto == null ?
                     Json(new { status = "200", msg = $"{firstname}, your message has been sent!" }, JsonRequestBehavior.AllowGet)

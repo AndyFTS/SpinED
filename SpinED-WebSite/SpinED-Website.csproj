@@ -163,6 +163,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\ModuleCase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +179,7 @@
     </None>
     <Content Include="css\docs.css" />
     <Content Include="css\materialize.min.css" />
+    <Content Include="css\site.css" />
     <Content Include="css\startup-materialize.css" />
     <Content Include="css\startup-materialize.min.css" />
     <Content Include="docs\about.html" />
@@ -403,6 +405,7 @@
     <Content Include="images\natanael-melchor-465383-unsplash.jpg" />
     <Content Include="images\NeuroFracture.png" />
     <Content Include="images\piron-guillaume-367208-unsplash.jpg" />
+    <Content Include="images\premium-module.png" />
     <Content Include="images\rawpixel-com-472352-unsplash.jpg" />
     <Content Include="images\ser006img00029.jpg" />
     <Content Include="images\ser016img00084.jpg" />
@@ -464,10 +467,10 @@
     <Content Include="Views\Home\Team.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <None Include="Properties\PublishProfiles\spinecasesdemo.falcontechnologysolutions.com.pubxml" />
+    <Content Include="Views\Shared\_ModuleCase.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="css\NewFolder1\" />
     <Folder Include="Database\" />
   </ItemGroup>
   <ItemGroup>

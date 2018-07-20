@@ -1,0 +1,241 @@
+﻿/*MODULES SECTION*/
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+
+#module-section {
+    background-color: #e8f3f7;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/*html,
+body {
+    background: #ecf0f1;
+    color: #444;
+    font-family: "Lato", Tahoma, Geneva, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+}*/
+
+.set-size {
+    font-size: 10em;
+}
+
+.charts-container:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.pie-wrapper {
+    height: 1em;
+    width: 1em;
+    float: left;
+    margin: 15px;
+    position: relative;
+}
+
+    .pie-wrapper:nth-child(5n + 1) {
+        clear: both;
+    }
+
+    .pie-wrapper .pie {
+        height: 100%;
+        width: 100%;
+        clip: rect(0, 1em, 1em, 0.5em);
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+
+        .pie-wrapper .pie .half-circle {
+            height: 100%;
+            width: 100%;
+            border: 0.1em solid #1a4362;
+            border-radius: 50%;
+            clip: rect(0, 0.5em, 1em, 0);
+            left: 0;
+            position: absolute;
+            top: 0;
+        }
+
+    .pie-wrapper .label {
+        background: #ffffff;
+        border-radius: 50%;
+        bottom: 0.4em;
+        color: #6e859f;
+        cursor: default;
+        display: block;
+        font-size: 0.25em;
+        font-weight: bold;
+        left: 0.4em;
+        line-height: 2.6em;
+        position: absolute;
+        right: 0.4em;
+        text-align: center;
+        top: 0.4em;
+    }
+
+        .pie-wrapper .label .smaller {
+            color: #6e859f;
+            font-size: 0.45em;
+            padding-bottom: 20px;
+            vertical-align: super;
+        }
+
+    .pie-wrapper .shadow {
+        height: 100%;
+        width: 100%;
+        border: 0.1em solid #bdc3c7;
+        border-radius: 50%;
+    }
+
+    .pie-wrapper.style-2 .label {
+        background: none;
+        color: #7f8c8d;
+    }
+
+        .pie-wrapper.style-2 .label .smaller {
+            color: #bdc3c7;
+        }
+
+    .pie-wrapper.progress-30 .pie .right-side {
+        display: none;
+    }
+
+    .pie-wrapper.progress-30 .pie .half-circle {
+        border-color: #1a4362;
+    }
+
+    .pie-wrapper.progress-30 .pie .left-side {
+        -webkit-transform: rotate(108deg);
+        transform: rotate(108deg);
+    }
+
+    .pie-wrapper.progress-60 .pie {
+        clip: rect(auto, auto, auto, auto);
+    }
+
+        .pie-wrapper.progress-60 .pie .right-side {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        .pie-wrapper.progress-60 .pie .half-circle {
+            border-color: #1a4362;
+        }
+
+        .pie-wrapper.progress-60 .pie .left-side {
+            -webkit-transform: rotate(216deg);
+            transform: rotate(216deg);
+        }
+
+    .pie-wrapper.progress-90 .pie {
+        clip: rect(auto, auto, auto, auto);
+    }
+
+        .pie-wrapper.progress-90 .pie .right-side {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        .pie-wrapper.progress-90 .pie .half-circle {
+            border-color: #1a4362;
+        }
+
+        .pie-wrapper.progress-90 .pie .left-side {
+            -webkit-transform: rotate(324deg);
+            transform: rotate(324deg);
+        }
+
+    .pie-wrapper.progress-45 .pie .right-side {
+        display: none;
+    }
+
+    .pie-wrapper.progress-45 .pie .half-circle {
+        border-color: #1a4362;
+    }
+
+    .pie-wrapper.progress-45 .pie .left-side {
+        -webkit-transform: rotate(162deg);
+        transform: rotate(162deg);
+    }
+
+    .pie-wrapper.progress-75 .pie {
+        clip: rect(auto, auto, auto, auto);
+    }
+
+        .pie-wrapper.progress-75 .pie .right-side {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        .pie-wrapper.progress-75 .pie .half-circle {
+            border-color: #1a4362;
+        }
+
+        .pie-wrapper.progress-75 .pie .left-side {
+            -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+        }
+
+    .pie-wrapper.progress-95 .pie {
+        clip: rect(auto, auto, auto, auto);
+    }
+
+        .pie-wrapper.progress-95 .pie .right-side {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        .pie-wrapper.progress-95 .pie .half-circle {
+            border-color: #1a4362;
+        }
+
+        .pie-wrapper.progress-95 .pie .left-side {
+            -webkit-transform: rotate(342deg);
+            transform: rotate(342deg);
+        }
+
+    .pie-wrapper.progress-100 .pie {
+        clip: rect(auto, auto, auto, auto);
+    }
+
+        .pie-wrapper.progress-100 .pie .right-side {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        .pie-wrapper.progress-100 .pie .half-circle {
+            border-color: #1a4362;
+        }
+
+        .pie-wrapper.progress-100 .pie .left-side {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+
+
+/*Fixes*/
+div.module-label-div {
+    line-height: 1.6;
+}
+
+span.module-label {
+    font-size: small;
+}
+
+i.module-icon {
+    vertical-align: middle;
+}
+
+a.module-link {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.halo {
+    box-shadow: 0px 0px 50px rgba(0,0,0,0.8);
+}

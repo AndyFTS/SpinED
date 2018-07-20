@@ -146,104 +146,70 @@
         </div>
     </div>
 </div>*@
-<!--Reviews-->
+<!--Modules Section-->
 <div class="section light full-height" id="module-section">
     <div class="row">
         <div class="col s12 m10 offset-m1 center">
+            <!--Trauma Module-->
+            <h2 class="primary-color-text left">Trauma</h2>
             <div class="row">
-                <div id="trauma_module" class="col s12 m12 l12 waves-effect" style="background-color:black; margin:10px;">
-                    <h3>Trauma</h3>
-                </div>
-                <div id='trauma_module_elements' class="col s12 m12 l12">
-                    <div class="row masonry-grid">
-                        <div class="col s12 m6 l4">
-                            <div class="card">
-                                <div class="card-image" id="thoracolumbar_card">
-                                    <a href="@Url.Action("Case1","Case")">
-                                        <img id="thoracolumbar_img_static" src="~/images/NeuroFracture.png">
-                                        <img id="thoracolumbar_img_vivid" style="display:none;" src="~/images/thoracolumbar600x400.gif" />
-                                    </a>
-                                    <span class="card-title">Case 1</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s12 m6 l4">
-                            <div class="card">
-                                <div class="card-image" id="cervical_card">
-                                    <a href="@Url.Action("Case1","Case")">
-                                        <img id="cervical_img_static" src="~/images/cervical600x400.jpg">
-                                        <img id="cervical_img_vivid" style="display:none;" src="~/images/cervical600x400.gif" />
-                                    </a>
-                                    <span class="card-title">Case 2</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s12 m6 l4">
-                            <div class="card">
-                                <div class="card-image" id="cervicaldislocation_card">
-                                    <a href="@Url.Action("Case1","Case")">
-                                        <img id="cervicaldislocation_img_static" src="~/images/cervicaldislocation600x400.png">
-                                        <img id="cervicaldislocation_img_vivid" style="display:none;" src="~/images/cervicaldislocation600x400.gif" />
-                                    </a>
-                                    <span class="card-title">Case 3</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s12 m6 l4">
-                            <div class="card">
-                                <div class="card-image" id="lumbar_card">
-                                    <a href="@Url.Action("Case1","Case")">
-                                        <img id="lumbar_img_static" src="~/images/lumbar600x400.png">
-                                        <img id="lumbar_img_vivid" style="display:none;" src="~/images/lumbar600x400.gif" />
-                                    </a>
-                                    <span class="card-title">Case 4</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s12 m6 l4">
-                            <div class="card">
-                                <div class="card-image" id="cervicalsubluxation_card">
-                                    <a href="@Url.Action("Case1","Case")">
-                                        <img id="cervicalsubluxation_img_static" src="~/images/cervicalsubluxation600x400.png">
-                                        <img id="cervicalsubluxation_img_vivid" style="display:none;" src="~/images/cervicalsubluxation600x400.gif" />
-                                    </a>
-                                    <span class="card-title">Case 5</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s12 m6 l4">
-                            <div class="card">
-                                <div class="card-image" id="cervicalundisplaced_card">
-                                    <a href="@Url.Action("Case1","Case")">
-                                        <img id="cervicalundisplaced_img_static" src="~/images/cervicalundisplaced600x400.png">
-                                        <img id="cervicalundisplaced_img_vivid" style="display:none;" src="~/images/cervicaundisplacedl600x400.gif" />
-                                    </a>
-                                    <span class="card-title">Case 6</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="set-size charts-container">
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Basic Trauma I", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Trauma", PercentCompleted = 60 })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Basic Trauma II", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Trauma", PercentCompleted = 30 })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Trauma I", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Trauma" })
 
-                <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
-                    <h3>Pediatric</h3>
                 </div>
-                <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
-                    <h3>Degenerative</h3>
+            </div>
+            <h2 class="primary-color-text left">Pediatric</h2>
+            <div class="row">
+                <div class="set-size charts-container">
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Congenital & Pediatric", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Pediatric", PercentCompleted = 95 })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Congenital & Pediatric II", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Pediatric", PercentCompleted = 76 })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Congenital & Pediatric III", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Pediatric", PercentCompleted = 100 })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Pediatric", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Pediatric" })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Pediatric II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Pediatric", isPremium = true })
                 </div>
-                <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
-                    <h3>Deformity</h3>
+            </div>
+            <h2 class="primary-color-text left">Degenerative</h2>
+            <div class="row">
+                <div class="set-size charts-container">
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Degenerative", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative", PercentCompleted = 46 })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Degenerative II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative" })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Degenerative", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative", isPremium = true })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Degenerative II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative", isPremium = true })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Degenerative III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative", isPremium = true })
                 </div>
-                <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
-                    <h3>Infection</h3>
+            </div>
+            <h2 class="primary-color-text left">Deformity</h2>
+            <div class="row">
+                <div class="set-size charts-container">
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity", PercentCompleted = 32 })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity II", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity", PercentCompleted = 48 })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity" })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity Basics", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity" })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Intermediate Deformity", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity" })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Deformity", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity", isPremium = true })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Deformity II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity", isPremium = true })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Deformity III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity", isPremium = true })
                 </div>
-                <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
-                    <h3>Tumor</h3>
+            </div>
+            <h2 class="primary-color-text left">Infectious</h2>
+            <div class="row">
+                <div class="set-size charts-container">
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious" })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious" })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious" })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious IV", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious" })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious VI", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious", isPremium = true })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Infectious ", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious", isPremium = true })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Infectious II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious", isPremium = true })
+
+
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div><!--.end of Modules Section-->
 
 <div class="section full-height" id="overview-section">
     <div class="container">
@@ -377,6 +343,13 @@
 
     <script type="text/javascript">
         $(function () {
+            $(".module-link").mouseenter(function () {
+                $(this).prev().addClass("halo");
+            });
+            $(".module-link").mouseleave(function () {
+                $(this).prev().removeClass("halo")
+            });
+
             $('#trauma_module').click(function () {
                 $('#trauma_module_elements').slideToggle();
 

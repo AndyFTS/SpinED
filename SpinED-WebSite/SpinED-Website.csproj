@@ -415,6 +415,8 @@
     <Content Include="images\spineMRI_1.png" />
     <Content Include="images\Spine_3D_1.png" />
     <Content Include="images\Spine_3D_Screws.png" />
+    <Content Include="images\Team\avatar-1577909_640.png" />
+    <Content Include="images\Team\avatar-256x256.png" />
     <Content Include="images\thoracolumbar600x400.gif" />
     <Content Include="js\animation.gsap.min.js" />
     <Content Include="js\imagesloaded.pkgd.min.js" />

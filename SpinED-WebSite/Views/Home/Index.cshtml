@@ -146,104 +146,181 @@
         </div>
     </div>
 </div>*@
-<!--Reviews-->
+<!--Modules Section-->
 <div class="section light full-height" id="module-section">
     <div class="row">
         <div class="col s12 m10 offset-m1 center">
+            <!--Trauma Module-->
+            <h2 class="primary-color-text left">Trauma</h2>
             <div class="row">
-                <div id="trauma_module" class="col s12 m12 l12 waves-effect" style="background-color:black; margin:10px;">
-                    <h3>Trauma</h3>
-                </div>
-                <div id='trauma_module_elements' class="col s12 m12 l12">
-                    <div class="row masonry-grid">
-                        <div class="col s12 m6 l4">
-                            <div class="card">
-                                <div class="card-image" id="thoracolumbar_card">
-                                    <a href="@Url.Action("Case1","Case")">
-                                        <img id="thoracolumbar_img_static" src="~/images/NeuroFracture.png">
-                                        <img id="thoracolumbar_img_vivid" style="display:none;" src="~/images/thoracolumbar600x400.gif" />
-                                    </a>
-                                    <span class="card-title">Case 1</span>
-                                </div>
+                <div class="set-size charts-container">
+                    <a href="@Url.Action("Case1","Case")" class="primary-color-text text-lighten-1">
+                        <div class="pie-wrapper progress-30">
+                            <span class="label">30<span class="smaller">%</span></span>
+                            <div class="pie">
+                                <div class="left-side half-circle"></div>
+                                <div class="right-side half-circle"></div>
+                            </div>
+                            <div class="module-label-div">
+                                <span class="module-label">Basic Trauma I</span>
                             </div>
                         </div>
-                        <div class="col s12 m6 l4">
-                            <div class="card">
-                                <div class="card-image" id="cervical_card">
-                                    <a href="@Url.Action("Case1","Case")">
-                                        <img id="cervical_img_static" src="~/images/cervical600x400.jpg">
-                                        <img id="cervical_img_vivid" style="display:none;" src="~/images/cervical600x400.gif" />
-                                    </a>
-                                    <span class="card-title">Case 2</span>
-                                </div>
-                            </div>
+                    </a>
+
+                    <div class="pie-wrapper progress-60">
+                        <span class="label">60<span class="smaller">%</span></span>
+                        <div class="pie">
+                            <div class="left-side half-circle"></div>
+                            <div class="right-side half-circle"></div>
                         </div>
-                        <div class="col s12 m6 l4">
-                            <div class="card">
-                                <div class="card-image" id="cervicaldislocation_card">
-                                    <a href="@Url.Action("Case1","Case")">
-                                        <img id="cervicaldislocation_img_static" src="~/images/cervicaldislocation600x400.png">
-                                        <img id="cervicaldislocation_img_vivid" style="display:none;" src="~/images/cervicaldislocation600x400.gif" />
-                                    </a>
-                                    <span class="card-title">Case 3</span>
-                                </div>
-                            </div>
+                        <div class="module-label-div">
+                            <span class="module-label">Basic Trauma II</span>
                         </div>
-                        <div class="col s12 m6 l4">
-                            <div class="card">
-                                <div class="card-image" id="lumbar_card">
-                                    <a href="@Url.Action("Case1","Case")">
-                                        <img id="lumbar_img_static" src="~/images/lumbar600x400.png">
-                                        <img id="lumbar_img_vivid" style="display:none;" src="~/images/lumbar600x400.gif" />
-                                    </a>
-                                    <span class="card-title">Case 4</span>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="pie-wrapper progress-100">
+                        <span class="label"><i class="material-icons grey-text medium module-icon">lock</i></span>
+                        <div class="pie">
+                            <div class="left-side half-circle"></div>
+                            <div class="right-side half-circle"></div>
                         </div>
-                        <div class="col s12 m6 l4">
-                            <div class="card">
-                                <div class="card-image" id="cervicalsubluxation_card">
-                                    <a href="@Url.Action("Case1","Case")">
-                                        <img id="cervicalsubluxation_img_static" src="~/images/cervicalsubluxation600x400.png">
-                                        <img id="cervicalsubluxation_img_vivid" style="display:none;" src="~/images/cervicalsubluxation600x400.gif" />
-                                    </a>
-                                    <span class="card-title">Case 5</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s12 m6 l4">
-                            <div class="card">
-                                <div class="card-image" id="cervicalundisplaced_card">
-                                    <a href="@Url.Action("Case1","Case")">
-                                        <img id="cervicalundisplaced_img_static" src="~/images/cervicalundisplaced600x400.png">
-                                        <img id="cervicalundisplaced_img_vivid" style="display:none;" src="~/images/cervicaundisplacedl600x400.gif" />
-                                    </a>
-                                    <span class="card-title">Case 6</span>
-                                </div>
-                            </div>
+                        <div class="module-label-div">
+                            <span class="module-label">Advanced Trauma</span>
                         </div>
                     </div>
                 </div>
+            </div>
+            <h2 class="primary-color-text left">Pediatric</h2>
+            <div class="row">
+                <div class="set-size charts-container">
+                    <a href="@Url.Action("Case1","Case")" class="module-link">
+                        <div class="pie-wrapper progress-90">
+                            <span class="label">88<span class="smaller">%</span></span>
+                            <div class="pie">
+                                <div class="left-side half-circle"></div>
+                                <div class="right-side half-circle"></div>
+                            </div>
+                            <div class="module-label-div">
+                                <span class="module-label">Congenital &amp; Pediatric</span>
+                            </div>
+                        </div>
+                    </a>
 
-                <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
-                    <h3>Pediatric</h3>
+                    <div class="pie-wrapper progress-100">
+                        <span class="label"><i class="material-icons grey-text medium module-icon">lock</i></span>
+                        <div class="pie">
+                            <div class="left-side half-circle"></div>
+                            <div class="right-side half-circle"></div>
+                        </div>
+                        <div class="module-label-div">
+                            <span class="module-label">Congenital &amp; Pediatric II</span>
+                        </div>
+                    </div>
+                    <div class="pie-wrapper progress-100">
+                        <span class="label"><i class="material-icons grey-text medium module-icon">lock</i></span>
+                        <div class="pie">
+                            <div class="left-side half-circle"></div>
+                            <div class="right-side half-circle"></div>
+                        </div>
+                        <div class="module-label-div">
+                            <span class="module-label">Pediatric I</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
-                    <h3>Degenerative</h3>
+            </div>
+            @*<div id="trauma_module" class="col s12 m12 l12 waves-effect" style="background-color:black; margin:10px;">
+            <h3>Trauma</h3>
+        </div>
+        <div id='trauma_module_elements' class="col s12 m12 l12">
+            <div class="row masonry-grid">
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image" id="thoracolumbar_card">
+                            <a href="@Url.Action("Case1","Case")">
+                                <img id="thoracolumbar_img_static" src="~/images/NeuroFracture.png">
+                                <img id="thoracolumbar_img_vivid" style="display:none;" src="~/images/thoracolumbar600x400.gif" />
+                            </a>
+                            <span class="card-title">Case 1</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
-                    <h3>Deformity</h3>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image" id="cervical_card">
+                            <a href="@Url.Action("Case1","Case")">
+                                <img id="cervical_img_static" src="~/images/cervical600x400.jpg">
+                                <img id="cervical_img_vivid" style="display:none;" src="~/images/cervical600x400.gif" />
+                            </a>
+                            <span class="card-title">Case 2</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
-                    <h3>Infection</h3>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image" id="cervicaldislocation_card">
+                            <a href="@Url.Action("Case1","Case")">
+                                <img id="cervicaldislocation_img_static" src="~/images/cervicaldislocation600x400.png">
+                                <img id="cervicaldislocation_img_vivid" style="display:none;" src="~/images/cervicaldislocation600x400.gif" />
+                            </a>
+                            <span class="card-title">Case 3</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
-                    <h3>Tumor</h3>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image" id="lumbar_card">
+                            <a href="@Url.Action("Case1","Case")">
+                                <img id="lumbar_img_static" src="~/images/lumbar600x400.png">
+                                <img id="lumbar_img_vivid" style="display:none;" src="~/images/lumbar600x400.gif" />
+                            </a>
+                            <span class="card-title">Case 4</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image" id="cervicalsubluxation_card">
+                            <a href="@Url.Action("Case1","Case")">
+                                <img id="cervicalsubluxation_img_static" src="~/images/cervicalsubluxation600x400.png">
+                                <img id="cervicalsubluxation_img_vivid" style="display:none;" src="~/images/cervicalsubluxation600x400.gif" />
+                            </a>
+                            <span class="card-title">Case 5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image" id="cervicalundisplaced_card">
+                            <a href="@Url.Action("Case1","Case")">
+                                <img id="cervicalundisplaced_img_static" src="~/images/cervicalundisplaced600x400.png">
+                                <img id="cervicalundisplaced_img_vivid" style="display:none;" src="~/images/cervicaundisplacedl600x400.gif" />
+                            </a>
+                            <span class="card-title">Case 6</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
+            <h3>Pediatric</h3>
+        </div>
+        <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
+            <h3>Degenerative</h3>
+        </div>
+        <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
+            <h3>Deformity</h3>
+        </div>
+        <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
+            <h3>Infection</h3>
+        </div>
+        <div class="col s12 m12 l12" style="background-color:black; margin:10px;">
+            <h3>Tumor</h3>
+        </div>*@
+
+
+        </div>
     </div>
-</div>
+</div><!--.end of Modules Section-->
 
 <div class="section full-height" id="overview-section">
     <div class="container">

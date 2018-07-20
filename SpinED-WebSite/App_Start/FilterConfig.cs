@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace spinecases2
+namespace SpinED
 {
     public class FilterConfig
     {

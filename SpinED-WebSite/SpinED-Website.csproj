@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>spinecases2</RootNamespace>
-    <AssemblyName>spinecases2</AssemblyName>
+    <RootNamespace>SpinED</RootNamespace>
+    <AssemblyName>SpinED</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -166,7 +166,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Connected Services\FTSEmailService\spinecases2.FTSEmailService.SendEmailMsgReplyDto.datasource">
+    <Content Include="Connected Services\FTSEmailService\SpinED.FTSEmailService.SendEmailMsgReplyDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\FTSEmailService\TbEmailService.disco" />

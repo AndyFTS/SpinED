@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace spinecases2
+namespace SpinED
 {
     public class RouteConfig
     {

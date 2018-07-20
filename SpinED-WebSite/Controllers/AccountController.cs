@@ -1,11 +1,11 @@
-﻿using spinecases2.Models;
+﻿using SpinED.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace spinecases2.Controllers
+namespace SpinED.Controllers
 {
     public class AccountController : Controller
     {

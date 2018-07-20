@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace spinecases2.FTSEmailService {
+namespace SpinED.FTSEmailService {
     using System.Runtime.Serialization;
     using System;
     
@@ -232,10 +232,10 @@ namespace spinecases2.FTSEmailService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private spinecases2.FTSEmailService.ErrorMessageDto ErrorMessageDtoField;
+        private SpinED.FTSEmailService.ErrorMessageDto ErrorMessageDtoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private spinecases2.FTSEmailService.SendEmailMsgRequestDto SendEmailMsgRequestField;
+        private SpinED.FTSEmailService.SendEmailMsgRequestDto SendEmailMsgRequestField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -248,7 +248,7 @@ namespace spinecases2.FTSEmailService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public spinecases2.FTSEmailService.ErrorMessageDto ErrorMessageDto {
+        public SpinED.FTSEmailService.ErrorMessageDto ErrorMessageDto {
             get {
                 return this.ErrorMessageDtoField;
             }
@@ -261,7 +261,7 @@ namespace spinecases2.FTSEmailService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public spinecases2.FTSEmailService.SendEmailMsgRequestDto SendEmailMsgRequest {
+        public SpinED.FTSEmailService.SendEmailMsgRequestDto SendEmailMsgRequest {
             get {
                 return this.SendEmailMsgRequestField;
             }
@@ -333,19 +333,19 @@ namespace spinecases2.FTSEmailService {
     public interface ITbEmailService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITbEmailService/SendEmail", ReplyAction="http://tempuri.org/ITbEmailService/SendEmailResponse")]
-        spinecases2.FTSEmailService.SendEmailMsgReplyDto SendEmail(spinecases2.FTSEmailService.SendEmailMsgRequestDto.EmailType emailType, spinecases2.FTSEmailService.SendEmailMsgRequestDto request);
+        SpinED.FTSEmailService.SendEmailMsgReplyDto SendEmail(SpinED.FTSEmailService.SendEmailMsgRequestDto.EmailType emailType, SpinED.FTSEmailService.SendEmailMsgRequestDto request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITbEmailService/SendEmail", ReplyAction="http://tempuri.org/ITbEmailService/SendEmailResponse")]
-        System.Threading.Tasks.Task<spinecases2.FTSEmailService.SendEmailMsgReplyDto> SendEmailAsync(spinecases2.FTSEmailService.SendEmailMsgRequestDto.EmailType emailType, spinecases2.FTSEmailService.SendEmailMsgRequestDto request);
+        System.Threading.Tasks.Task<SpinED.FTSEmailService.SendEmailMsgReplyDto> SendEmailAsync(SpinED.FTSEmailService.SendEmailMsgRequestDto.EmailType emailType, SpinED.FTSEmailService.SendEmailMsgRequestDto request);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ITbEmailServiceChannel : spinecases2.FTSEmailService.ITbEmailService, System.ServiceModel.IClientChannel {
+    public interface ITbEmailServiceChannel : SpinED.FTSEmailService.ITbEmailService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class TbEmailServiceClient : System.ServiceModel.ClientBase<spinecases2.FTSEmailService.ITbEmailService>, spinecases2.FTSEmailService.ITbEmailService {
+    public partial class TbEmailServiceClient : System.ServiceModel.ClientBase<SpinED.FTSEmailService.ITbEmailService>, SpinED.FTSEmailService.ITbEmailService {
         
         public TbEmailServiceClient() {
         }
@@ -366,11 +366,11 @@ namespace spinecases2.FTSEmailService {
                 base(binding, remoteAddress) {
         }
         
-        public spinecases2.FTSEmailService.SendEmailMsgReplyDto SendEmail(spinecases2.FTSEmailService.SendEmailMsgRequestDto.EmailType emailType, spinecases2.FTSEmailService.SendEmailMsgRequestDto request) {
+        public SpinED.FTSEmailService.SendEmailMsgReplyDto SendEmail(SpinED.FTSEmailService.SendEmailMsgRequestDto.EmailType emailType, SpinED.FTSEmailService.SendEmailMsgRequestDto request) {
             return base.Channel.SendEmail(emailType, request);
         }
         
-        public System.Threading.Tasks.Task<spinecases2.FTSEmailService.SendEmailMsgReplyDto> SendEmailAsync(spinecases2.FTSEmailService.SendEmailMsgRequestDto.EmailType emailType, spinecases2.FTSEmailService.SendEmailMsgRequestDto request) {
+        public System.Threading.Tasks.Task<SpinED.FTSEmailService.SendEmailMsgReplyDto> SendEmailAsync(SpinED.FTSEmailService.SendEmailMsgRequestDto.EmailType emailType, SpinED.FTSEmailService.SendEmailMsgRequestDto request) {
             return base.Channel.SendEmailAsync(emailType, request);
         }
     }

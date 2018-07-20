@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace spinecases2.Controllers
+namespace SpinED.Controllers
 {
     public class CaseController : Controller
     {

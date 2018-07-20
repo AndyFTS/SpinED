@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace spinecases2.Models
+namespace SpinED.Models
 {
     public class LoginViewModel
     {

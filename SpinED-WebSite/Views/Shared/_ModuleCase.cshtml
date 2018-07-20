@@ -1,0 +1,38 @@
+﻿@model SpinED.Models.ModuleCase
+
+
+@{
+    /*20,60,90,75,45,95,100 are the only ones in css right now. add more when needed*/
+
+    var progressPercentageClass = "progress-" + 5 * (Math.Floor(Model.PercentCompleted / 5.00));
+    if (Model.isLocked)
+    {
+        progressPercentageClass = "progress-100";
+    }
+}
+
+<div class="pie-wrapper @progressPercentageClass">
+    @if (!Model.isLocked)
+    {
+        <span class="label">@Model.PercentCompleted<span class="smaller">%</span></span>
+
+    }
+    else if (Model.isPremium)
+    {
+        <span class="label"><img style="vertical-align:middle;top:10px" width="65" src="~/images/premium-module.png" /></span>
+    }
+    else
+    {
+        <span class="label"><i class="material-icons grey-text medium module-icon">lock</i></span>
+
+    }
+    <a href="@Model.LinkHref" class="module-link">
+        <div class="pie">
+            <div class="left-side half-circle"></div>
+            <div class="right-side half-circle"></div>
+        </div>
+        <div class="module-label-div">
+            <span class="module-label">@Model.CaseName</span>
+        </div>
+    </a>
+</div>

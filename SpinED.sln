@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spinecases2", "spinecases2\spinecases2.csproj", "{019520BD-9A31-4FF8-B67E-985ED2B2133E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpinED-Website", "SpinED-WebSite\SpinED-Website.csproj", "{019520BD-9A31-4FF8-B67E-985ED2B2133E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88033013-8BD6-42DB-979E-4DB7080B351A}
 	EndGlobalSection
 EndGlobal

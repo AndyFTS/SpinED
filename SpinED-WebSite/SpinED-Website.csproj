@@ -178,6 +178,7 @@
     </None>
     <Content Include="css\docs.css" />
     <Content Include="css\materialize.min.css" />
+    <Content Include="css\site.css" />
     <Content Include="css\startup-materialize.css" />
     <Content Include="css\startup-materialize.min.css" />
     <Content Include="docs\about.html" />
@@ -467,7 +468,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="css\NewFolder1\" />
     <Folder Include="Database\" />
   </ItemGroup>
   <ItemGroup>

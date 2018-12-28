@@ -4,8 +4,9 @@
 #module-section {
     background-color: #e8f3f7;
 }
-.trauma-intro-text{
-    font-weight:500;
+.trauma-intro-text {
+    font-size: large;
+    font-weight: 600;
     color: black;
 }
 *,
@@ -13,7 +14,10 @@
 *:after {
     box-sizing: border-box;
 }
-
+.module-header {
+    font-size: 42px;
+    font-weight: 400;
+}
 /*html,
 body {
     background: #ecf0f1;
@@ -22,7 +26,6 @@ body {
     font-size: 16px;
     padding: 10px;
 }*/
-
 .set-size {
     font-size: 10em;
 }

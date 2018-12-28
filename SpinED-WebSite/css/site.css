@@ -4,8 +4,9 @@
 #module-section {
     background-color: #e8f3f7;
 }
-.trauma-intro-text{
-    font-weight:500;
+.trauma-intro-text {
+    font-size: large;
+    font-weight: 600;
     color: black;
 }
 *,

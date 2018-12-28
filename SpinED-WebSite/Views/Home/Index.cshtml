@@ -91,7 +91,7 @@
 
             <!--Trauma Module-->
 
-            <h2 class="primary-color-text left">Trauma</h2>
+            <h2 class="primary-color-text left module-header">Trauma</h2>
             <div class="row">
                 <div class="set-size charts-container">
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Basic Trauma I", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Trauma", PercentCompleted = 60 })
@@ -100,7 +100,7 @@
 
                 </div>
             </div>
-            <h2 class="primary-color-text left">Pediatric</h2>
+            <h2 class="primary-color-text left module-header">Pediatric</h2>
             <div class="row">
                 <div class="set-size charts-container">
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Congenital & Pediatric", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Pediatric", PercentCompleted = 95 })
@@ -110,7 +110,7 @@
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Pediatric II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Pediatric", isPremium = true })
                 </div>
             </div>
-            <h2 class="primary-color-text left">Degenerative</h2>
+            <h2 class="primary-color-text left module-header">Degenerative</h2>
             <div class="row">
                 <div class="set-size charts-container">
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Degenerative", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative", PercentCompleted = 46 })
@@ -120,9 +120,9 @@
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Degenerative III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative", isPremium = true })
                 </div>
             </div>
-            <h2 class="primary-color-text left">Deformity</h2>
+            <h2 class="primary-color-text left module-header">Deformity</h2>
             <div class="row">
-                <div class="set-size charts-container">
+                <div class="set-size charts-container module-header">
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity", PercentCompleted = 32 })
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity II", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity", PercentCompleted = 48 })
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity" })
@@ -133,7 +133,7 @@
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Deformity III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity", isPremium = true })
                 </div>
             </div>
-            <h2 class="primary-color-text left">Infectious</h2>
+            <h2 class="primary-color-text left module-header">Infectious</h2>
             <div class="row">
                 <div class="set-size charts-container">
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious" })

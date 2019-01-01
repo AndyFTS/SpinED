@@ -31,7 +31,7 @@
     <div class="horizontal-half-wrapper hide-on-small-and-down">
         <div class="header-background white"></div>
         <div class="header-wrapper row valign-wrapper">
-            <div class="col s12 m8 offset-m2 valign">
+            <div class="col s12 m8 offset-m2 valign">   
                 <h1>REVIEW OUR CATALOGUE</h1>
                 <span class="tagline">Use our cases for your learning and teaching with selections available from trauma, deformity, infection, tumor and pediatrics.  We offer the largest selection of spine cases available in the world.</span>
                 <a class="waves-effect waves-light col s6 m6 l6 " style="padding-right: 5px;">
@@ -115,7 +115,7 @@
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Degenerative II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative" })
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Degenerative", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative", isPremium = true })
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Degenerative II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative", isPremium = true })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Degenerative III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative", isPremium = true })
+
                 </div>
             </div>
             <h2 class="primary-color-text left module-header">Deformity</h2>
@@ -124,8 +124,7 @@
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity", PercentCompleted = 32 })
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity II", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity", PercentCompleted = 48 })
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity" })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity Basics", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity" })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Intermediate Deformity", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity" })
+                   
                    </div>
             </div>
             <h2 class="primary-color-text left module-header">Infectious</h2>
@@ -134,8 +133,17 @@
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious" })
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious" })
                     @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious" })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious IV", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious" })
-                   
+
+                </div>
+            </div>
+
+            <h2 class="primary-color-text left module-header">Tumor</h2>
+            <div class="row">
+                <div class="set-size charts-container">
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Tumor I", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Tumor" })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Tumor II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Tumor" })
+                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Tumor III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Tumor" })
+
                 </div>
             </div>
         </div>
@@ -176,14 +184,14 @@
             <div class="col m3">
                 <div class="perspective-wrapper">
                     <div class="feature rotate-y-in-out fade-in-out left-transform-origin right-align">
-                        <h3>Start a case by Region</h3>
-                        <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
+                        <h3>START BY REGION</h3>
+                        <p>Select your region of interest to review and answer cases based on areas of weaknesses.</p>
                     </div>
                 </div>
                 <div class="perspective-wrapper">
                     <div class="feature rotate-y-in-out fade-in-out left-transform-origin right-align">
-                        <h3>Complete Modules to increase difficulty</h3>
-                        <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
+                        <h3>COMPLETE MODULES TO INCREASE DIFFICULTY</h3>
+                        <p>Advance from basic diagnoses to management of complex failures of spine surgery. Recognize and treat a variety of conditions including infection, pseudoarthrosis, adjacent level disease, junctional kyphosis and more.</p>
                     </div>
                 </div>
             </div>
@@ -198,14 +206,14 @@
             <div class="col m3">
                 <div class="perspective-wrapper">
                     <div class="feature rotate-y-in-out fade-in-out right-transform-origin">
-                        <h3>Start by Pathology</h3>
-                        <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
+                        <h3>START BY PATHOLOGY</h3>
+                        <p>Select your pathology of interest to review and answer cases based on areas of weaknesses.</p>
                     </div>
                 </div>
                 <div class="perspective-wrapper">
                     <div class="feature rotate-y-in-out fade-in-out right-transform-origin">
-                        <h3>Learn</h3>
-                        <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
+                        <h3>LEARN</h3>
+                        <p>Using our academic profiles, for the first time, you can identify your areas of weakness in spine surgery and focus your studying. This studying can be facilitated with directed cases. Recommended reading is provided.</p>
                     </div>
                 </div>
             </div>
@@ -218,13 +226,13 @@
             <div class="col s12 m8 offset-m2">
                 <div class="feature">
                     <h3>Learning Performance</h3>
-                    <p>Achieve your study goals more efficiently with automated progress tracking. Keep playing to raise your score, unlock features, and ace the Royal College. </p>
+                    <p>Improve the efficiency of your studying to target areas of weakness. We offer a brand-new automated progress tracking which provides live-feedback to the user. </p>
                 </div>
                 <div class="device-triplet">
-                    <div class="phone-preview-sizer iphone">
+                    <div class="phone-preview-sizer iphone" >
                         <div class="phone-preview"></div>
                         <div class="image-container default" style="background-image:url(../../images/AppDemo530990_0001_Screenshot_20180525-102115.png.png)"></div>
-                    </div>
+                    </div
                     <div class="phone-preview-sizer iphone left-in-out">
                         <div class="phone-preview"></div>
                         <div class="image-container default" style="background-image:url(../../images/AppDemo530990_0002_Screenshot_20180525-102124.png.png)"></div>

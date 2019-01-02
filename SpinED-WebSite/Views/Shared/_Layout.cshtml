@@ -23,17 +23,7 @@
                 <li><a href="@Url.Action("Index","Home")">Home</a></li>
                 <li><a href="@Url.Action("About","Home")">About</a></li>
                 <li><a href="@Url.Action("Team","Home")">Team</a></li>
-                @{
-            if(Session["Signedin"] == null)
-            {
-                <li><a class="waves-effect waves-light" href="@Url.Action("Login","Home")">Login</a></li>
-            }
-            else
-            {
-                 <li><a class="waves-effect waves-light" href="@Url.Action("Index","Account")">Profile</a></li>
-            }
-           
-             }
+        
                 <li><a href="@Url.Action("Index","Home")">Download</a></li>
             </ul>
             @*<ul id="pages" class="dropdown-content">

@@ -35,7 +35,7 @@ namespace SpinED.Controllers
 
             return View();
         }
-        public ActionResult Member()
+        public ActionResult News()
         {
             return View();
         }

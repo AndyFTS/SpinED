@@ -35,6 +35,10 @@ namespace SpinED.Controllers
 
             return View();
         }
+        public ActionResult News()
+        {
+            return View();
+        }
         public JsonResult ContactUs(string firstname, string lastname, string email, string phone, string msg)
         {
 

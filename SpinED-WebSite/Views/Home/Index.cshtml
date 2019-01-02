@@ -1,7 +1,6 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
 <div class="header full-height horizontal-half-transition">
     <div class="background">
         <img src="~/images/rawpixel-com-472352-unsplash.jpg" alt="">
@@ -31,7 +30,7 @@
     <div class="horizontal-half-wrapper hide-on-small-and-down">
         <div class="header-background white"></div>
         <div class="header-wrapper row valign-wrapper">
-            <div class="col s12 m8 offset-m2 valign">   
+            <div class="col s12 m8 offset-m2 valign">
                 <h1>REVIEW OUR CATALOGUE</h1>
                 <span class="tagline">Use our cases for your learning and teaching with selections available from trauma, deformity, infection, tumor and pediatrics.  We offer the largest selection of spine cases available in the world.</span>
                 <a class="waves-effect waves-light col s6 m6 l6 " style="padding-right: 5px;">
@@ -78,78 +77,105 @@
                     <h4><i class="icon-rocket"></i> AR Spine <b style="font-size:medium; color:red; font-weight:500;">Coming Soon</b></h4>
                     <p class="caption">Visualize real spines, based on 3-D reconstructions of actual spinal deformities.  You will be able to place pedicle screws and correct deformities, picking the start point and trajectory for screws.  Input your own data pre-operatively and correct your own spines prior to the OR to reduce patient morbidity.</p>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
+@*<div class="section light full-height" id="module-section">
+        <div class="row">
+            <div class="col s12 m10 offset-m1 center">
+                <p class="trauma-intro-text">Cases and basic concepts are separated into modules for the user to guide their studying. </p>
 
-<div class="section light full-height" id="module-section">
-    <div class="row">
-        <div class="col s12 m10 offset-m1 center">
-            <p class="trauma-intro-text">Cases and basic concepts are separated into modules for the user to guide their studying. </p>
+                <!--Trauma Module-->
 
-            <!--Trauma Module-->
+                <h2 class="primary-color-text left module-header">Trauma</h2>
+                <div class="row">
+                    <div class="set-size charts-container">
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Basic Trauma I", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Trauma", PercentCompleted = 60 })
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Basic Trauma II", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Trauma", PercentCompleted = 30 })
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Trauma I", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Trauma" })
 
-            <h2 class="primary-color-text left module-header">Trauma</h2>
-            <div class="row">
-                <div class="set-size charts-container">
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Basic Trauma I", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Trauma", PercentCompleted = 60 })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Basic Trauma II", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Trauma", PercentCompleted = 30 })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Trauma I", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Trauma" })
+                    </div>
+                </div>
+                <h2 class="primary-color-text left module-header">Pediatric</h2>
+                <div class="row">
+                    <div class="set-size charts-container">
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Congenital & Pediatric", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Pediatric", PercentCompleted = 95 })
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Congenital & Pediatric II", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Pediatric", PercentCompleted = 76 })
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Congenital & Pediatric III", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Pediatric", PercentCompleted = 100 })
+                    </div>
+                </div>
+                <h2 class="primary-color-text left module-header">Degenerative</h2>
+                <div class="row">
+                    <div class="set-size charts-container">
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Degenerative", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative", PercentCompleted = 46 })
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Degenerative II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative" })
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Degenerative", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative", isPremium = true })
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Degenerative II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative", isPremium = true })
 
+                    </div>
+                </div>
+                <h2 class="primary-color-text left module-header">Deformity</h2>
+                <div class="row">
+                    <div class="set-size charts-container module-header">
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity", PercentCompleted = 32 })
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity II", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity", PercentCompleted = 48 })
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity" })
+
+                       </div>
+                </div>
+                <h2 class="primary-color-text left module-header">Infectious</h2>
+                <div class="row">
+                    <div class="set-size charts-container">
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious" })
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious" })
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious" })
+
+                    </div>
+                </div>
+
+                <h2 class="primary-color-text left module-header">Tumor</h2>
+                <div class="row">
+                    <div class="set-size charts-container">
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Tumor I", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Tumor" })
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Tumor II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Tumor" })
+                        @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Tumor III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Tumor" })
+
+                    </div>
                 </div>
             </div>
-            <h2 class="primary-color-text left module-header">Pediatric</h2>
-            <div class="row">
-                <div class="set-size charts-container">
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Congenital & Pediatric", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Pediatric", PercentCompleted = 95 })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Congenital & Pediatric II", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Pediatric", PercentCompleted = 76 })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Congenital & Pediatric III", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Pediatric", PercentCompleted = 100 })
+        </div>
+    </div><!--.end of Modules Section-->*@
+<div class="section light full-height">
+    <div class="container">
+        <div class="row valign-wrapper">
+            <div class="col s12 m4">
+                <div class="staggered-transition-wrapper">
+                    <div class="feature fade-right-in-out">
+                        <h3>From the basics to the most complex.</h3>
+                        <p>Developed by Dr. Colby Oitment, Dr. Desmond Kwok and Dr. Blake Yaraskavich from the departments of orthopedic and neurosurgery with the intended goal to improve spinal surgery education in underserviced areas with limited access to cross sectional imaging.</p>
+                    </div>
+                    <div class="feature fade-right-in-out">
+                        <h3>Learning Performance</h3>
+                        <p>Improve the efficiency of your studying to target areas of weakness. We offer a brand-new automated progress tracking which provides live-feedback to the user. </p>
+                    </div>
                 </div>
             </div>
-            <h2 class="primary-color-text left module-header">Degenerative</h2>
-            <div class="row">
-                <div class="set-size charts-container">
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Degenerative", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative", PercentCompleted = 46 })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Degenerative II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative" })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Degenerative", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative", isPremium = true })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Advanced Degenerative II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Degenerative", isPremium = true })
-
-                </div>
-            </div>
-            <h2 class="primary-color-text left module-header">Deformity</h2>
-            <div class="row">
-                <div class="set-size charts-container module-header">
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity", PercentCompleted = 32 })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity II", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity", PercentCompleted = 48 })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Deformity III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Deformity" })
-                   
-                   </div>
-            </div>
-            <h2 class="primary-color-text left module-header">Infectious</h2>
-            <div class="row">
-                <div class="set-size charts-container">
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious" })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious" })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Infectious III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Infectious" })
-
-                </div>
-            </div>
-
-            <h2 class="primary-color-text left module-header">Tumor</h2>
-            <div class="row">
-                <div class="set-size charts-container">
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Tumor I", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Tumor" })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Tumor II", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Tumor" })
-                    @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Tumor III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Tumor" })
-
+            <div class="col s12 m8">
+                <div class="device-pair">
+                    <div class="phone-preview-sizer">
+                        <div class="phone-preview"></div>
+                        <div class="image-container default" style="background-image:url(../../images/AppDemo530990_0002_Screenshot_20180525-102124.png.png)"></div>
+                    </div>
+                    <div class="phone-preview-sizer left-in-out">
+                        <div class="phone-preview"></div>
+                        <div class="image-container default" style="background-image:url(../../images/AppDemo530990_0000_Screenshot_20180525-102059.png.png)"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div><!--.end of Modules Section-->
-
+</div>
 <div class="section full-height" id="overview-section">
     <div class="container">
         <div class="row valign-wrapper">
@@ -220,7 +246,7 @@
         </div>
     </div>
 </div>
-<div class="section black full-height">
+@*<div class="section light full-height hide-on-med-and-up">
     <div class="container">
         <div class="row">
             <div class="col s12 m8 offset-m2">
@@ -229,10 +255,10 @@
                     <p>Improve the efficiency of your studying to target areas of weakness. We offer a brand-new automated progress tracking which provides live-feedback to the user. </p>
                 </div>
                 <div class="device-triplet">
-                    <div class="phone-preview-sizer iphone" >
+                    <div class="phone-preview-sizer iphone">
                         <div class="phone-preview"></div>
                         <div class="image-container default" style="background-image:url(../../images/AppDemo530990_0001_Screenshot_20180525-102115.png.png)"></div>
-                    </div
+                    </div>
                     <div class="phone-preview-sizer iphone left-in-out">
                         <div class="phone-preview"></div>
                         <div class="image-container default" style="background-image:url(../../images/AppDemo530990_0002_Screenshot_20180525-102124.png.png)"></div>
@@ -245,6 +271,63 @@
             </div>
         </div>
     </div>
+</div>*@
+<div class="section full-height">
+    <div class="row">
+        <div class="col s12 m10 offset-m1 center">
+            <h1>Latest News</h1>
+            <div class="row masonry-grid">
+                <div class="col s12 m6 l4">
+                    <div class="card fade-in-out up-in-out" data-duration="0">
+                        <div class="card-image">
+                            <a href="@Url.Action("News","Home")"><img src="http://placehold.it/600x400"></a>
+                            <span class="card-title">Something Interesting</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card fade-in-out up-in-out" data-duration="0">
+                        <div class="card-image">
+                            <a href="@Url.Action("News","Home")"><img src="http://placehold.it/600x400"></a>
+                            <span class="card-title">Spined in Uganda</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card fade-in-out up-in-out" data-duration="0">
+                        <div class="card-image">
+                            <a href="@Url.Action("News","Home")"><img src="http://placehold.it/600x400"></a>
+                            <span class="card-title">humanitarian things</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card fade-in-out up-in-out" data-duration="0">
+                        <div class="card-image">
+                            <a href="@Url.Action("News","Home")"><img src="http://placehold.it/600x400"></a>
+                            <span class="card-title">We are not for profit</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card fade-in-out up-in-out" data-duration="0">
+                        <div class="card-image">
+                            <a href="@Url.Action("News","Home")"><img src="http://placehold.it/600x400"></a>
+                            <span class="card-title">we want all your money</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card fade-in-out up-in-out" data-duration="0">
+                        <div class="card-image">
+                            <a href="@Url.Action("News","Home")"><img src="http://placehold.it/600x400"></a>
+                            <span class="card-title">Good Bye</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Contact Us -->
 <div class="section light valign-wrapper">
@@ -252,7 +335,6 @@
         <form class="js-validate" id="ContactUsForm" method="get" action="@Url.Action("ContactUs","Home")">
             <div class="row">
                 <div class="col s12"><h2 class="section-title">Contact Us</h2></div>
-
                 <div class="input-field col s6">
                     <input id="firstname" name="firstname" type="text">
                     <label for="firstname">First Name</label>
@@ -279,7 +361,6 @@
     </div>
 </div>
 @section scripts{
-
     <script type="text/javascript">
         $(function () {
             $(".module-link").mouseenter(function () {
@@ -365,12 +446,12 @@
                 var emptyPhone = $("#phone").filter(function () { return !$.trim(this.value); }).length > 0
                 var emptyMsg = $("#msg").filter(function () { return !$.trim(this.value); }).length > 0
                 if (emptyFName | emptyEmail | emptyLName | emptyPhone | emptyMsg) {
-                    Materialize.toast("sorry, we cant properly review your message unless you fill out all the sections.", 5000);                   
+                    Materialize.toast("sorry, we cant properly review your message unless you fill out all the sections.", 5000);
                 }
                 else
                 {
                     var formData = $(this).serialize();
-               
+
                 $.ajax({
                     dataType: "json",
                     url: "@Url.Action("ContactUs","Home")",
@@ -384,7 +465,7 @@
                         Materialize.toast('Sorry, We couldnt send your message at this time. Please try again later ',  5000 );
                       }
                 });
-                }  
+                }
             });
             //var ctx = document.getElementById("chart");
             //var ctx2 = document.getElementById("chart2");

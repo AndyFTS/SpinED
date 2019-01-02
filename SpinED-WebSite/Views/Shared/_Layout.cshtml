@@ -21,19 +21,9 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 @*<li class="active"><a class="dropdown-button" href="#!" data-activates="pages" data-constrainWidth="false" data-belowOrigin="true">Pages<i class="material-icons right">arrow_drop_down</i></a></li>*@
                 <li><a href="@Url.Action("Index","Home")">Home</a></li>
-                <li><a href="@Url.Action("About","Home")">About</a></li>
+                @*<li><a href="@Url.Action("About","Home")">About</a></li>*@
                 <li><a href="@Url.Action("Team","Home")">Team</a></li>
-                @{
-            if(Session["Signedin"] == null)
-            {
-                <li><a class="waves-effect waves-light" href="@Url.Action("Login","Home")">Login</a></li>
-            }
-            else
-            {
-                 <li><a class="waves-effect waves-light" href="@Url.Action("Index","Account")">Profile</a></li>
-            }
-           
-             }
+        
                 <li><a href="@Url.Action("Index","Home")">Download</a></li>
             </ul>
             @*<ul id="pages" class="dropdown-content">
@@ -70,20 +60,8 @@
             </ul>
         </li>*@
         <li><a class="waves-effect waves-light" href="@Url.Action("Index","Home")">Home</a></li>
-        <li><a class="waves-effect waves-light" href="@Url.Action("About","Home")">About</a></li>
+        @*<li><a class="waves-effect waves-light" href="@Url.Action("About","Home")">About</a></li>*@
         <li><a class="waves-effect waves-light" href="@Url.Action("Team","Home")">Team</a></li>
-        @{
-            if(Session["Signedin"] == null)
-            {
-                <li><a class="waves-effect waves-light" href="@Url.Action("Login","Home")">Login</a></li>
-            }
-            else
-            {
-                 <li><a class="waves-effect waves-light" href="@Url.Action("Index","Account")">Profile</a></li>
-            }
-           
-        }
-
         <li><a class="waves-effect waves-light" href="@Url.Action("Index","Home")">Download</a></li>
     </ul>
     <!--Render Body Content -->

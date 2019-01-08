@@ -87,8 +87,44 @@
                 @*<p class="trauma-intro-text">Cases and basic concepts are separated into modules for the user to guide their studying. </p>*@
 
                 <!--Trauma Module-->
+                
 
-                <h2 class="primary-color-text left module-header">Trauma</h2>
+                <div class="col s12">
+                    <h3 class="module-header-text">Modules</h3>
+                    <div class="row"> 
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="module-list-text">
+                                        <h3>Trauma</h3>
+                                    </div>
+                                    <div class="row module-preview-wrapper">
+                                        <div class="col s12 m3">
+                                            <div class="phone-preview-sizer module-section">
+                                                <div class="phone-preview"></div>
+                                                <div class="image-container default" style="background-image:url(../../images/AppDemo2530x990.png)"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m8 row">
+                                            <div class="col s12 m12">
+                                                <h3 class="module-list-head-text">From the basics to the most complex.</h3>
+                                                <p class="module-list-sub-text">Developed by Dr. Colby Oitment, Dr. Desmond Kwok and Dr. Blake Yaraskavich from the departments of orthopedic and neurosurgery with the intended goal to improve spinal surgery education in underserviced areas with limited access to cross sectional imaging.</p>
+                                            </div>
+                                            <div class="col s12 m12">
+                                                <h3 class="module-list-head-text">Learning Performance</h3>
+                                                <p class="module-list-sub-text">Developed by Dr. Colby Oitment, Dr. Desmond Kwok and Dr. Blake Yaraskavich from the departments of orthopedic and neurosurgery with the intended goal to improve spinal surgery education in underserviced areas with limited access to cross sectional imaging.</p>
+                                            </div>
+                                            <div class="col s12 m12">
+                                                <button type="submit" class="waves-effect waves-light btn-large">Demo</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                @*<h2 class="primary-color-text left module-header">Trauma</h2>
                 <div class="row">
                     <div class="set-size charts-container">
                         @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Basic Trauma I", isLocked = false, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Trauma", PercentCompleted = 60 })
@@ -142,7 +178,7 @@
                         @Html.Partial("_ModuleCase", new SpinED.Models.ModuleCase { CaseName = "Tumor III", isLocked = true, LinkHref = Url.Action("Case1", "Case"), ModuleName = "Tumor" })
 
                     </div>
-                </div>
+                </div>*@
             </div>
         </div>
     </div><!--.end of Modules Section-->

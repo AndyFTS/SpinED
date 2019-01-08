@@ -4,19 +4,28 @@
 #module-section {
     background-color: #e8f3f7;
 }
+
 .trauma-intro-text {
     font-size: large;
     font-weight: 600;
     color: black;
 }
+
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
+
 .module-header {
     font-size: 42px;
     font-weight: 400;
+}
+
+.module-header-text {
+    color: #12232d !important;
+    font-size: 72px;
+    font-weight: bold;
 }
 /*html,
 body {
@@ -244,4 +253,25 @@ a.module-link {
 
 .halo {
     box-shadow: 0px 0px 50px rgba(0,0,0,0.8);
+}
+.module-section{
+    max-width:300px;
+}
+.module-list-text h3 {
+    color: white;
+    background-color: #12232d;
+    padding: 10px;
+    margin: 0px;
+    font-weight: 400;
+}
+.module-list-sub-text{
+    color:black;
+    font-weight:bold;
+}
+.module-list-head-text {
+    color: black !important;
+    font-weight: bold;
+}
+.module-preview-wrapper{
+    margin-top:10px;
 }

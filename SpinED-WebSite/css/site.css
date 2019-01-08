@@ -20,12 +20,15 @@
 .module-header {
     font-size: 42px;
     font-weight: 400;
+
 }
 
 .module-header-text {
     color: #12232d !important;
     font-size: 72px;
     font-weight: bold;
+    margin-top: -15px !important;
+    float:left;
 }
 /*html,
 body {
@@ -274,4 +277,7 @@ a.module-link {
 }
 .module-preview-wrapper{
     margin-top:10px;
+}
+.module-demo-button{
+    background-color:#12232d !important; 
 }

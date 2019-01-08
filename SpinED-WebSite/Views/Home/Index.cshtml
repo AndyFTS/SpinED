@@ -94,11 +94,11 @@
                     <div class="row"> 
                         <div class="col s12">
                             <div class="row">
-                                <div class="col s12">
+                                <div class="col s12 demo-module">
                                     <div class="module-list-text">
                                         <h3>Trauma</h3>
                                     </div>
-                                    <div class="row module-preview-wrapper">
+                                    <div class="row module-preview-wrapper module-demo-content" style="display:none;">
                                         <div class="col s12 m3">
                                             <div class="phone-preview-sizer module-section">
                                                 <div class="phone-preview"></div>
@@ -115,12 +115,64 @@
                                                 <p class="module-list-sub-text">Developed by Dr. Colby Oitment, Dr. Desmond Kwok and Dr. Blake Yaraskavich from the departments of orthopedic and neurosurgery with the intended goal to improve spinal surgery education in underserviced areas with limited access to cross sectional imaging.</p>
                                             </div>
                                             <div class="col s12 m12">
-                                                <button type="submit" class="waves-effect waves-light btn-large">Demo</button>
+                                                <button type="submit" class="waves-effect waves-light btn-large module-demo-button">Demo</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col s12 demo-module">
+                                    <div class="module-list-text">
+                                        <h3>Deformity</h3>
+                                    </div>
+                                    <div class="row module-preview-wrapper module-demo-content" style="display:none;">
+                                        <div class="col s12 m3">
+                                            <div class="phone-preview-sizer module-section">
+                                                <div class="phone-preview"></div>
+                                                <div class="image-container default" style="background-image:url(../../images/AppDemo2530x990.png)"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m8 row">
+                                            <div class="col s12 m12">
+                                                <h3 class="module-list-head-text">From the basics to the most complex.</h3>
+                                                <p class="module-list-sub-text">Developed by Dr. Colby Oitment, Dr. Desmond Kwok and Dr. Blake Yaraskavich from the departments of orthopedic and neurosurgery with the intended goal to improve spinal surgery education in underserviced areas with limited access to cross sectional imaging.</p>
+                                            </div>
+                                            <div class="col s12 m12">
+                                                <h3 class="module-list-head-text">Learning Performance</h3>
+                                                <p class="module-list-sub-text">Developed by Dr. Colby Oitment, Dr. Desmond Kwok and Dr. Blake Yaraskavich from the departments of orthopedic and neurosurgery with the intended goal to improve spinal surgery education in underserviced areas with limited access to cross sectional imaging.</p>
+                                            </div>
+                                            <div class="col s12 m12">
+                                                <button type="submit" class="waves-effect waves-light btn-large module-demo-button">Demo</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="col s12 demo-module">
+                                    <div class="module-list-text">
+                                        <h3>Tumor</h3>
+                                    </div>
+                                    <div class="row module-preview-wrapper module-demo-content" style="display:none;">
+                                        <div class="col s12 m3">
+                                            <div class="phone-preview-sizer module-section">
+                                                <div class="phone-preview"></div>
+                                                <div class="image-container default" style="background-image:url(../../images/AppDemo2530x990.png)"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m8 row">
+                                            <div class="col s12 m12">
+                                                <h3 class="module-list-head-text">From the basics to the most complex.</h3>
+                                                <p class="module-list-sub-text">Developed by Dr. Colby Oitment, Dr. Desmond Kwok and Dr. Blake Yaraskavich from the departments of orthopedic and neurosurgery with the intended goal to improve spinal surgery education in underserviced areas with limited access to cross sectional imaging.</p>
+                                            </div>
+                                            <div class="col s12 m12">
+                                                <h3 class="module-list-head-text">Learning Performance</h3>
+                                                <p class="module-list-sub-text">Developed by Dr. Colby Oitment, Dr. Desmond Kwok and Dr. Blake Yaraskavich from the departments of orthopedic and neurosurgery with the intended goal to improve spinal surgery education in underserviced areas with limited access to cross sectional imaging.</p>
+                                            </div>
+                                            <div class="col s12 m12">
+                                                <button type="submit" class="waves-effect waves-light btn-large module-demo-button">Demo</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -404,7 +456,14 @@
             $(".module-link").mouseleave(function () {
                 $(this).prev().removeClass("halo")
             });
-
+            $('.demo-module').mouseenter(function () {
+                $(this).children(".module-demo-content").slideDown(600);
+                console.log("mouseover");
+            });
+            $('.demo-module').mouseleave(function () {
+                $(this).children(".module-demo-content").slideUp(600);
+                console.log("mouseout");
+            });
             $('#trauma_module').click(function () {
                 $('#trauma_module_elements').slideToggle();
 
@@ -473,6 +532,7 @@
             ];
             Materialize.scrollFire(options);
 
+
             $('#ContactUsForm').submit(function(e) {
                 e.preventDefault();
                 var emptyFName = $("#firstname").filter(function () { return !$.trim(this.value); }).length > 0
@@ -502,91 +562,7 @@
                 });
                 }
             });
-            //var ctx = document.getElementById("chart");
-            //var ctx2 = document.getElementById("chart2");
-            //var ctx3 = document.getElementById("chart3");
-            //var ctx4 = document.getElementById("chart4");
-            //var myLineChart = new Chart(ctx, {
-            //    type: 'line',
-            //    data: {
-            //        labels: ["January", "February", "March", "April", "May", "June", "July"],
-            //        datasets: [{
-            //            label: "Your Monthly Scores",
-            //            backgroundColor: 'rgba(83, 127, 152,0.38)',
-            //            borderColor: 'rgb(22, 63, 86)',
-            //            data: [0, 10, 5, 2, 20, 30, 45],
-            //        },
-            //        {
-            //            label: "Average User Scores",
-            //            backgroundColor: 'rgba(204, 204, 204,0.38)',
-            //            borderColor: 'rgb(0, 0, 0)',
-            //            data: [7, 13, 2, 8, 36, 2, 50],
-            //        }
-            //        ]
-            //    }
-
-
-            //});
-            //var radarchart = new Chart(ctx2, {
-            //    type: 'radar',
-            //    data: {
-            //        labels: ['Pediatric', 'Degenerative', 'Deformity', 'Infection', 'Tumor', 'Trauma'],
-            //        datasets: [{
-            //            label: "Your Scores",
-            //            backgroundColor: 'rgba(83, 127, 152,0.38)',
-            //            borderColor: 'rgb(22, 63, 86)',
-            //            data: [20, 10, 34, 50, 40, 17],
-            //        }, {
-            //            label: "Avg User",
-            //            backgroundColor: 'rgba(204, 204, 204,0.38)',
-            //            borderColor: 'rgb(0, 0, 0)',
-            //            data: [6, 32, 12, 75, 22, 67]
-            //        }
-
-            //        ]
-            //    }
-
-            //});
-            //var piechart = new Chart(ctx3, {
-            //    type: 'doughnut',
-            //    data: {
-            //        labels: ['Pediatric', 'Degenerative', 'Deformity', 'Infection', 'Tumor', 'Trauma'],
-            //        datasets: [{
-            //            label: "Your Scores",
-            //            backgroundColor: 'rgba(83, 127, 152,0.38)',
-            //            borderColor: 'rgb(22, 63, 86)',
-            //            data: [20, 10, 34, 50, 40, 17],
-            //        }
-            //            , {
-            //            label: "Avg User",
-            //            backgroundColor: 'rgba(204, 204, 204,0.38)',
-            //            borderColor: 'rgb(0, 0, 0)',
-            //            data: [6, 32, 12, 75, 22, 67]
-            //        }
-
-            //        ]
-            //    }
-            //});
-            //var barchart = new Chart(ctx4, {
-            //    type: 'bar',
-            //    data: {
-            //        labels: ['Pediatric', 'Degenerative', 'Deformity', 'Infection', 'Tumor', 'Trauma'],
-            //        datasets: [{
-            //            label: "Your Scores",
-            //            backgroundColor: 'rgba(83, 127, 152,0.38)',
-            //            borderColor: 'rgb(22, 63, 86)',
-            //            data: [20, 10, 34, 50, 40, 17],
-            //        }, {
-            //            label: "Avg User",
-            //            backgroundColor: 'rgba(204, 204, 204,0.38)',
-            //            borderColor: 'rgb(0, 0, 0)',
-            //            data: [6, 32, 12, 75, 22, 67]
-            //        }
-
-            //        ]
-            //    }
-            //});
-            //$('#u_y_w')
+      
         });
     </script>
 }
